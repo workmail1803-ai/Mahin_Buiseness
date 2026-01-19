@@ -42,6 +42,8 @@ const closeMenu = document.getElementById('closeMenu');
 const topicList = document.getElementById('topicList');
 const startBtn = document.getElementById('startBtn');
 const restartBtn = document.getElementById('restartBtn');
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+const fullscreenIcon = document.getElementById('fullscreenIcon');
 
 // ============================
 // State
@@ -57,6 +59,7 @@ function init() {
     updateSlide();
     setupEventListeners();
     applySlideBackground();
+    updateFullscreenButton();
     
     // Add bounce animation to icons on load
     setTimeout(() => {
@@ -96,6 +99,13 @@ function setupEventListeners() {
         restartBtn.addEventListener('click', () => {
             goToSlide(0);
         });
+    }
+
+    // Fullscreen toggle
+    if (fullscreenBtn) {
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+        document.addEventListener('fullscreenchange', updateFullscreenButton);
+        document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
     }
     
     // Menu toggle
@@ -171,6 +181,11 @@ function handleKeyboard(e) {
         case 'End':
             e.preventDefault();
             goToSlide(totalSlides - 1);
+            break;
+        case 'f':
+        case 'F':
+            e.preventDefault();
+            toggleFullscreen();
             break;
     }
 }
@@ -294,6 +309,51 @@ function addBounceAnimations() {
 // ============================
 function toggleMenu() {
     sideMenu.classList.toggle('active');
+}
+
+// ============================
+// Fullscreen Handling
+// ============================
+function toggleFullscreen() {
+    const isSupported = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+    if (!isSupported) {
+        return;
+    }
+
+    const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+    const docEl = document.documentElement;
+
+    if (!isFullscreen) {
+        if (docEl.requestFullscreen) {
+            docEl.requestFullscreen();
+        } else if (docEl.webkitRequestFullscreen) {
+            docEl.webkitRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+function updateFullscreenButton() {
+    if (!fullscreenBtn || !fullscreenIcon) {
+        return;
+    }
+
+    const isSupported = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+    if (!isSupported) {
+        fullscreenBtn.style.display = 'none';
+        return;
+    }
+
+    const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+    fullscreenIcon.classList.toggle('fa-expand', !isFullscreen);
+    fullscreenIcon.classList.toggle('fa-compress', isFullscreen);
+    fullscreenBtn.setAttribute('aria-pressed', isFullscreen ? 'true' : 'false');
+    fullscreenBtn.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen');
 }
 
 // ============================
