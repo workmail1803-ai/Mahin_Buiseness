@@ -1,0 +1,1195 @@
+\documentclass[12pt,a4paper]{article}
+
+% ============================
+% PACKAGES
+% ============================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{setspace}
+\usepackage{parskip}
+
+% ============================
+% PAGE GEOMETRY
+% ============================
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% ============================
+% COLORS
+% ============================
+\definecolor{primaryblue}{RGB}{0, 82, 147}
+\definecolor{secondaryblue}{RGB}{52, 152, 219}
+\definecolor{lightblue}{RGB}{214, 234, 248}
+\definecolor{darkgray}{RGB}{52, 73, 94}
+\definecolor{lightgray}{RGB}{236, 240, 241}
+\definecolor{accentgreen}{RGB}{39, 174, 96}
+\definecolor{accentorange}{RGB}{230, 126, 34}
+\definecolor{accentred}{RGB}{192, 57, 43}
+
+% ============================
+% HYPERREF SETUP
+% ============================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    urlcolor=secondaryblue,
+    citecolor=primaryblue,
+    pdfauthor={Business Studies},
+    pdftitle={Comprehensive Business Studies Booklet},
+    pdfsubject={Business Education}
+}
+
+% ============================
+% HEADER AND FOOTER
+% ============================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{primaryblue}{\textbf{Business Studies Booklet}}}
+\fancyhead[R]{\textcolor{darkgray}{\thepage}}
+\fancyfoot[C]{\textcolor{darkgray}{\small A Comprehensive Guide to Business Fundamentals}}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{primaryblue}\leaders\hrule height \headrulewidth\hfill}}
+
+% ============================
+% SECTION FORMATTING
+% ============================
+\titleformat{\section}
+    {\color{primaryblue}\LARGE\bfseries}
+    {\thesection}{1em}{}[\titlerule]
+    
+\titleformat{\subsection}
+    {\color{secondaryblue}\Large\bfseries}
+    {\thesubsection}{1em}{}
+    
+\titleformat{\subsubsection}
+    {\color{darkgray}\large\bfseries}
+    {\thesubsubsection}{1em}{}
+
+% ============================
+% TOC FORMATTING
+% ============================
+\renewcommand{\cftsecfont}{\color{primaryblue}\bfseries}
+\renewcommand{\cftsubsecfont}{\color{secondaryblue}}
+\renewcommand{\cftsecpagefont}{\color{primaryblue}\bfseries}
+
+% ============================
+% TCOLORBOX STYLES
+% ============================
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{definitionbox}[1][]{
+    enhanced,
+    colback=lightblue,
+    colframe=primaryblue,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=\faIcon{book} Definition,
+    #1
+}
+
+\newtcolorbox{keyconceptbox}[1][]{
+    enhanced,
+    colback=lightgray,
+    colframe=darkgray,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=\faIcon{lightbulb} Key Concept,
+    #1
+}
+
+\newtcolorbox{examplebox}[1][]{
+    enhanced,
+    colback=green!5,
+    colframe=accentgreen,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=\faIcon{check-circle} Example,
+    #1
+}
+
+\newtcolorbox{importantbox}[1][]{
+    enhanced,
+    colback=orange!5,
+    colframe=accentorange,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=\faIcon{exclamation-triangle} Important,
+    #1
+}
+
+\newtcolorbox{advantagebox}[1][]{
+    enhanced,
+    colback=green!10,
+    colframe=accentgreen,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=\faIcon{thumbs-up} Advantages,
+    #1
+}
+
+\newtcolorbox{disadvantagebox}[1][]{
+    enhanced,
+    colback=red!10,
+    colframe=accentred,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=\faIcon{thumbs-down} Disadvantages,
+    #1
+}
+
+% ============================
+% DOCUMENT BEGINS
+% ============================
+\begin{document}
+
+% ============================
+% TITLE PAGE
+% ============================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge\bfseries\textcolor{primaryblue}{Business Studies}}\\[0.5cm]
+    {\Huge\bfseries\textcolor{secondaryblue}{Comprehensive Booklet}}\\[1cm]
+    
+    \begin{tikzpicture}
+        \draw[line width=3pt, primaryblue] (0,0) -- (12,0);
+    \end{tikzpicture}
+    
+    \vspace{1.5cm}
+    
+    {\Large\textcolor{darkgray}{A Complete Guide to Understanding}}\\[0.3cm]
+    {\Large\textcolor{darkgray}{Business Fundamentals \& Concepts}}
+    
+    \vspace{2cm}
+    
+    \begin{tikzpicture}
+        \fill[primaryblue] (0,0) circle (2.5cm);
+        \node[white] at (0,0) {\Huge\faIcon{briefcase}};
+    \end{tikzpicture}
+    
+    \vfill
+    
+    {\large\textcolor{darkgray}{\today}}
+    
+\end{titlepage}
+
+% ============================
+% TABLE OF CONTENTS
+% ============================
+\newpage
+\tableofcontents
+\newpage
+
+% ============================
+% CHAPTER 1: INTRODUCTION TO BUSINESS STUDIES
+% ============================
+\section{Introduction to Business Studies}
+
+\begin{definitionbox}
+\textbf{Business Studies} is an academic subject taught in schools and at university level in many countries. Its study combines elements of accountancy, finance, marketing, organizational studies, human resource management, and operations. Business studies is a broad subject, where the range of topics is designed to give the student a general overview of the various elements of running a business.
+\end{definitionbox}
+
+\subsection{What Is a Business?}
+
+\begin{keyconceptbox}
+The term \textbf{business} refers to an organization or enterprising entity engaged in commercial, industrial, or professional activities. Businesses can be:
+\begin{itemize}
+    \item \textbf{For-profit entities} --- Organizations that operate to generate revenue and profit
+    \item \textbf{Non-profit organizations} --- Organizations that operate to fulfill a charitable mission or further a social cause
+\end{itemize}
+\end{keyconceptbox}
+
+Businesses range in scale from \textbf{sole proprietorships} to \textbf{international corporations} and can range in size from small to large.
+
+\subsection{How Do You Start a Business?}
+
+There are a number of steps you need to go through in order to start a business:
+
+\begin{enumerate}[label=\textcolor{primaryblue}{\arabic*.}]
+    \item \textbf{Conducting market research} --- Understanding your target market and competition
+    \item \textbf{Developing a business plan} --- Creating a roadmap for your business
+    \item \textbf{Seeking capital or other forms of funding} --- Securing financial resources
+    \item \textbf{Choosing a location and business structure} --- Determining where and how to operate
+    \item \textbf{Picking the right name} --- Selecting an appropriate business name
+    \item \textbf{Submitting registration paperwork} --- Completing legal registration
+    \item \textbf{Obtaining tax documents} --- Getting employer and taxpayer IDs
+    \item \textbf{Pulling permits and licenses} --- Obtaining necessary legal permissions
+    \item \textbf{Setting up a bank account} --- Facilitating everyday banking needs
+\end{enumerate}
+
+% ============================
+% CHAPTER 2: NEEDS AND WANTS
+% ============================
+\section{Understanding Needs and Wants}
+
+\begin{importantbox}
+For the purpose of spending and saving money wisely, every person must know the difference between needs and wants.
+\end{importantbox}
+
+\subsection{What are Needs?}
+
+\begin{definitionbox}
+\textbf{Needs} are the basic requirements or necessities that are essential for your survival. In other words, they are the things you \textbf{have to have}, or \textbf{cannot do without}.
+\end{definitionbox}
+
+\subsubsection{Basic Needs for Human Survival}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{check}}]
+    \item \textbf{Oxygen} --- Essential for breathing
+    \item \textbf{Water} --- Required for hydration
+    \item \textbf{Food} --- Necessary for nutrition
+    \item Basic health care products
+    \item Clothing
+    \item Tools to work
+    \item Protective housing
+\end{itemize}
+
+\subsubsection{Types of Needs}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{9cm}|}
+\hline
+\rowcolor{primaryblue}
+\textcolor{white}{\textbf{Type of Need}} & \textcolor{white}{\textbf{Description}} \\
+\hline
+\textbf{Physical Needs} & Basic or physiological needs such as food, water, and clothing \\
+\hline
+\textbf{Subjective Needs} & Psychological needs including self-esteem, sense of security, and love \\
+\hline
+\end{tabular}
+\caption{Classification of Human Needs}
+\end{table}
+
+\subsection{What are Wants?}
+
+\begin{definitionbox}
+\textbf{Wants} are desires. Wants are the things that you would like to have but are \textbf{not essential} to your survival. Every person has their own set of desires or wants.
+\end{definitionbox}
+
+\begin{examplebox}
+Examples of wants include:
+\begin{itemize}
+    \item A big house
+    \item Fancy food
+    \item Branded clothes
+    \item A new car
+    \item Trip to a foreign country
+\end{itemize}
+\end{examplebox}
+
+\begin{keyconceptbox}
+\textbf{Key Points about Wants:}
+\begin{itemize}
+    \item Wants can change over time as tastes and preferences change
+    \item The inability to fulfill a want may not cause death or physical illness
+    \item However, unfulfilled wants may result in mental distress
+\end{itemize}
+\end{keyconceptbox}
+
+\subsection{Consumer Goods vs Producer Goods}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\textcolor{white}{\textbf{Consumer Goods}} & \textcolor{white}{\textbf{Producer Goods}} \\
+\hline
+Goods finally used by consumers to satisfy their wants & Goods used by producers to produce more goods \\
+\hline
+Directly satisfy human wants & Continue the process of production \\
+\hline
+\end{tabular}
+\caption{Comparison of Consumer and Producer Goods}
+\end{table}
+
+% ============================
+% CHAPTER 3: TYPES OF BUSINESS ORGANIZATIONS
+% ============================
+\section{Types of Business Organizations}
+
+\subsection{Sole Trader}
+
+\begin{definitionbox}
+A \textbf{sole trader} is a single owner business, usually family orientated. A sole trader can easily control this type of business because it is small.
+\end{definitionbox}
+
+\begin{advantagebox}
+\begin{itemize}
+    \item Easy to control due to small size
+    \item Limited capital required
+    \item Few legal formalities
+    \item Quick decision-making
+\end{itemize}
+\end{advantagebox}
+
+\begin{disadvantagebox}
+\begin{itemize}
+    \item \textbf{Unlimited liability} --- If the business goes bankrupt, the owner has to forfeit personal possessions like land papers and personal car
+\end{itemize}
+\end{disadvantagebox}
+
+\subsubsection{Sources of Fixed Capital for Sole Traders}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{money-bill-wave}}]
+    \item Personal savings of the sole trader
+    \item Loans from banks
+    \item Mortgages from building societies
+    \item Ploughed-back profits
+\end{itemize}
+
+\subsection{Partnership}
+
+\begin{definitionbox}
+\textbf{Partnership} is a business between two to twenty persons. Each partner needs to sign a \textbf{Deed of Agreement} that gives details of:
+\begin{itemize}
+    \item Capital contributed by each partner
+    \item Rate of interest to be paid on capital
+    \item Salaries
+\end{itemize}
+\end{definitionbox}
+
+\begin{advantagebox}
+\begin{itemize}
+    \item More capital available compared to a sole trader
+    \item Partners can consult each other and make correct decisions
+    \item Partnership can make use of individual skills
+\end{itemize}
+\end{advantagebox}
+
+\begin{disadvantagebox}
+\begin{itemize}
+    \item Ordinary partners have \textbf{unlimited liability}
+    \item Conflicts and disagreements between partners may occur
+    \item Limited membership makes it difficult to raise large sums of capital
+\end{itemize}
+\end{disadvantagebox}
+
+\subsubsection{Sources of Fixed Capital for Partnerships}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{money-bill-wave}}]
+    \item Personal savings of the partners
+    \item Loans from banks
+    \item Hire purchase and leasing
+\end{itemize}
+
+\subsection{Limited Companies}
+
+\begin{keyconceptbox}
+Limited companies have three key features:
+\begin{enumerate}
+    \item \textbf{Limited Liability} --- Shareholders only lose their investment if the company fails
+    \item \textbf{Separate Legal Identity} --- The company is legally separate from its owners
+    \item \textbf{Continuity} --- The company continues to exist even if ownership changes
+\end{enumerate}
+\end{keyconceptbox}
+
+Companies must be filed with the \textbf{Registrar of Companies}. The shareholders elect a \textbf{Board of Directors}, usually at an annual general meeting, to run the company on their behalf.
+
+\subsubsection{Sources of Long-Term Finance for Companies}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{chart-line}}]
+    \item Issuing debentures and shares
+    \item Using ploughed-back profits
+    \item Borrowing from banks
+    \item Using hire purchase and leasing facilities
+\end{itemize}
+
+\subsection{Private Limited Companies (Ltd)}
+
+\begin{definitionbox}
+\textbf{Private Limited Companies} must use the words '\textbf{limited}' or '\textbf{Ltd}' after their name and cannot sell shares to the general public.
+\end{definitionbox}
+
+\begin{keyconceptbox}
+\textbf{Key Requirements:}
+\begin{itemize}
+    \item One or more directors required
+    \item Minimum of two shareholders
+    \item Maximum number of shareholders is 50
+    \item Cannot publicly trade shares
+    \item Must be registered with the Registrar of Companies
+    \item Accounts must be filed with the Registrar of Companies
+\end{itemize}
+\end{keyconceptbox}
+
+\begin{examplebox}
+Examples of Private Limited Companies in Bangladesh:
+\begin{itemize}
+    \item Elite Motors
+    \item Unicode
+    \item Progressive Packers and Shippers (Pvt) Limited
+    \item Dell Service Bangladesh
+\end{itemize}
+\end{examplebox}
+
+\subsection{Public Limited Companies (PLC)}
+
+\begin{definitionbox}
+\textbf{Public Limited Companies} must use the words '\textbf{public limited company}' or '\textbf{plc}' after their name.
+\end{definitionbox}
+
+\begin{keyconceptbox}
+\textbf{Key Requirements:}
+\begin{itemize}
+    \item Minimum of two directors
+    \item Minimum of two shareholders
+    \item Members of the public can be invited to buy shares
+    \item Shares are quoted on the stock exchange
+\end{itemize}
+\end{keyconceptbox}
+
+\begin{advantagebox}
+\begin{itemize}
+    \item Capital is easy to raise due to:
+    \begin{itemize}
+        \item Limited liability for shareholders
+        \item Public can buy shares
+        \item Shares traded on stock exchange
+    \end{itemize}
+\end{itemize}
+\end{advantagebox}
+
+\begin{disadvantagebox}
+\begin{itemize}
+    \item Formation is costly in time and money
+    \item Many documents must be submitted to the Registrar of Companies
+    \item Coordination and communication problems might arise
+\end{itemize}
+\end{disadvantagebox}
+
+\subsection{Incorporated vs Unincorporated Businesses}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\textcolor{white}{\textbf{Incorporated Businesses}} & \textcolor{white}{\textbf{Unincorporated Businesses}} \\
+\hline
+Limited liability & Unlimited liability \\
+\hline
+Separate legal personality & No separate legal identity \\
+\hline
+Can continue if bankruptcy occurs & May cease to exist \\
+\hline
+Must be registered under Companies Act & No registration required \\
+\hline
+Examples: ACI HealthCare Limited, United Hospital Limited & Examples: Sole traders, Partnerships \\
+\hline
+\end{tabular}
+\caption{Comparison of Incorporated and Unincorporated Businesses}
+\end{table}
+
+\subsubsection{Important Documents for Incorporation}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{file-alt}}]
+    \item \textbf{Certificate of Incorporation} --- Issued by the Registrar of Companies after registration
+    \item \textbf{Memorandum of Association} --- The document that sets up the company
+    \item \textbf{Articles of Association} --- Sets out how the company is run, governed, and owned
+\end{itemize}
+
+\subsection{Cooperatives}
+
+\begin{definitionbox}
+\textbf{Cooperatives} are people-centred enterprises owned, controlled, and run by and for their members to realise their common economic, social, and cultural needs and aspirations.
+\end{definitionbox}
+
+\begin{keyconceptbox}
+\textbf{Key Features of Cooperatives:}
+\begin{itemize}
+    \item Bring people together in a democratic and equal way
+    \item Members vote on major decisions
+    \item Board of directors elected from among members
+\end{itemize}
+\end{keyconceptbox}
+
+\subsubsection{Types of Cooperatives}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{users}}]
+    \item \textbf{Consumers' Cooperative} --- Business owned by its customers (e.g., grocery stores)
+    \item \textbf{Retailers' Cooperative} --- Members are retailers rather than consumers
+\end{itemize}
+
+% ============================
+% CHAPTER 4: FRANCHISES
+% ============================
+\section{Franchise Business}
+
+\begin{definitionbox}
+A \textbf{franchise business} is a business in which the owners, or ``\textbf{franchisors}'', sell the rights to their business logo, name, and model to third party retail outlets, owned by independent, third party operators, called ``\textbf{franchisees}''.
+\end{definitionbox}
+
+\begin{keyconceptbox}
+Franchises are an extremely common way of doing business around the world!
+\end{keyconceptbox}
+
+\subsection{The Role of the Franchisor}
+
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{building}}]
+    \item Motivated to share their experience and know-how with franchisees
+    \item Provide franchisees with tools needed to operate their businesses to brand standards
+    \item Focused on ensuring each franchisee operates to system standards
+\end{itemize}
+
+\subsection{The Role of the Franchisee}
+
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{store}}]
+    \item Ensure all employees are properly trained
+    \item Ensure the franchise is properly staffed at all times
+    \item Advertise and promote the franchise and its approved products
+    \item Follow guidelines provided by the franchisor
+\end{itemize}
+
+% ============================
+% CHAPTER 5: STAKEHOLDERS
+% ============================
+\section{Stakeholders}
+
+\begin{definitionbox}
+A \textbf{stakeholder} has a vested interest in a company and can either affect or be affected by a business's operations and performance.
+\end{definitionbox}
+
+\subsection{Types of Stakeholders}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\textcolor{white}{\textbf{Internal Stakeholders}} & \textcolor{white}{\textbf{External Stakeholders}} \\
+\hline
+People whose interest comes through a direct relationship & People who do not directly work with the company \\
+\hline
+Connected through employment, ownership, or investment & Affected by actions and outcomes of the business \\
+\hline
+Examples: Employees, Owners, Investors & Examples: Suppliers, Creditors, Public groups \\
+\hline
+\end{tabular}
+\caption{Comparison of Internal and External Stakeholders}
+\end{table}
+
+\begin{keyconceptbox}
+\textbf{Typical Stakeholders Include:}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{user-tie}}]
+    \item Investors
+    \item Employees
+    \item Customers
+    \item Suppliers
+    \item Communities
+    \item Governments
+    \item Trade associations
+\end{itemize}
+\end{keyconceptbox}
+
+% ============================
+% CHAPTER 6: INDUSTRY SECTORS
+% ============================
+\section{Primary, Secondary, and Tertiary Sectors}
+
+\begin{keyconceptbox}
+There are \textbf{three main types of industry} in which firms operate. These sectors form a \textbf{chain of production} which provides customers with finished goods or services.
+\end{keyconceptbox}
+
+\subsection{Primary Production (Extractive)}
+
+\begin{definitionbox}
+\textbf{Primary production} involves acquiring raw materials. This is sometimes known as \textbf{extractive production}.
+\end{definitionbox}
+
+\begin{examplebox}
+Examples of Primary Production:
+\begin{itemize}
+    \item Metals and coal being \textbf{mined}
+    \item Oil \textbf{drilled} from the ground
+    \item Rubber \textbf{tapped} from trees
+    \item Foodstuffs \textbf{farmed}
+    \item Fish \textbf{trawled}
+\end{itemize}
+\end{examplebox}
+
+\subsection{Secondary Production (Manufacturing)}
+
+\begin{definitionbox}
+\textbf{Secondary production} is the manufacturing and assembly process.
+\end{definitionbox}
+
+This involves:
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{industry}}]
+    \item Converting raw materials into components (e.g., making plastics from oil)
+    \item Assembling the product (e.g., building houses, bridges, and roads)
+\end{itemize}
+
+\subsection{Tertiary Production (Services)}
+
+\begin{definitionbox}
+\textbf{Tertiary production} refers to the commercial services that support the production and distribution process.
+\end{definitionbox}
+
+\begin{examplebox}
+Examples of Tertiary Services:
+\begin{itemize}[columns=2]
+    \item Insurance
+    \item Transport
+    \item Advertising
+    \item Warehousing
+    \item Teaching
+    \item Health care
+\end{itemize}
+\end{examplebox}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance=2.5cm]
+    \node[draw, rounded corners, fill=primaryblue, text=white, minimum width=3cm, minimum height=1cm] (primary) {\textbf{Primary Sector}};
+    \node[draw, rounded corners, fill=secondaryblue, text=white, minimum width=3cm, minimum height=1cm, right of=primary, xshift=2cm] (secondary) {\textbf{Secondary Sector}};
+    \node[draw, rounded corners, fill=accentgreen, text=white, minimum width=3cm, minimum height=1cm, right of=secondary, xshift=2cm] (tertiary) {\textbf{Tertiary Sector}};
+    
+    \draw[->, line width=2pt, darkgray] (primary) -- (secondary);
+    \draw[->, line width=2pt, darkgray] (secondary) -- (tertiary);
+\end{tikzpicture}
+\caption{Chain of Production}
+\end{figure}
+
+% ============================
+% CHAPTER 7: TRAINING
+% ============================
+\section{Training in Business}
+
+\begin{keyconceptbox}
+\textbf{Training} is basically a teaching and learning activity carried on to enhance the skills, knowledge, and abilities of the employees working in the organization.
+\end{keyconceptbox}
+
+\subsection{Induction Training}
+
+\begin{definitionbox}
+\textbf{Induction training} enables a new recruit to become productive as quickly as possible. It can avoid costly mistakes by recruits not knowing the procedures or techniques of their new jobs.
+\end{definitionbox}
+
+The length of induction training will vary based on:
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{clock}}]
+    \item Complexity of the job
+    \item Size of the business
+    \item Level or position of the job within the business
+\end{itemize}
+
+\subsubsection{Areas Included in Induction Training}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{graduation-cap}}]
+    \item Learning about the duties of the job
+    \item Meeting new colleagues
+    \item Seeing the layout of the premises
+    \item Learning the values and aims of the business
+    \item Learning about the internal workings and policies of the business
+\end{itemize}
+
+\subsection{On-the-Job Training}
+
+\begin{definitionbox}
+With \textbf{on-the-job training}, employees receive training whilst remaining in the workplace.
+\end{definitionbox}
+
+\subsubsection{Main Methods of On-the-Job Training}
+
+\begin{enumerate}[label=\textcolor{primaryblue}{\arabic*.}]
+    \item \textbf{Demonstration/Instruction} --- Showing the trainee how to do the job
+    \item \textbf{Coaching} --- A more intensive method involving a close working relationship between an experienced employee and the trainee
+    \item \textbf{Job Rotation} --- The trainee is given several jobs in succession to gain experience of a wide range of activities (e.g., a graduate management trainee might spend periods in several different departments)
+    \item \textbf{Projects} --- Employees join a project team, giving them exposure to other parts of the business and allowing them to take part in new activities. Most successful project teams are ``multi-disciplinary''
+\end{enumerate}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\multicolumn{2}{|c|}{\textcolor{white}{\textbf{On-the-Job Training}}} \\
+\hline
+\rowcolor{accentgreen!20}
+\textbf{Advantages} & \rowcolor{accentred!20}\textbf{Disadvantages} \\
+\hline
+Generally most cost-effective & Quality depends on ability of trainer and time available \\
+\hline
+Employees are actually productive & Bad habits might be passed on \\
+\hline
+Opportunity to learn whilst doing & Learning environment may not be conducive \\
+\hline
+Training alongside real colleagues & Potential disruption to production \\
+\hline
+\end{tabular}
+\caption{Advantages and Disadvantages of On-the-Job Training}
+\end{table}
+
+\subsection{Off-the-Job Training}
+
+\begin{definitionbox}
+\textbf{Off-the-job training} occurs when employees are taken away from their place of work to be trained.
+\end{definitionbox}
+
+\subsubsection{Common Methods of Off-the-Job Training}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{university}}]
+    \item \textbf{Day release} --- Employee takes time off work to attend a local college or training centre
+    \item \textbf{Distance learning/evening classes}
+    \item \textbf{Block release courses} --- May involve several weeks at a local college
+    \item \textbf{Sandwich courses} --- Employee spends a longer period at college (e.g., six months) before returning to work
+    \item \textbf{Sponsored courses in higher education}
+    \item \textbf{Self-study, computer-based training}
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\multicolumn{2}{|c|}{\textcolor{white}{\textbf{Off-the-Job Training}}} \\
+\hline
+\rowcolor{accentgreen!20}
+\textbf{Advantages} & \rowcolor{accentred!20}\textbf{Disadvantages} \\
+\hline
+A wider range of skills or qualifications can be obtained & More expensive (transport and accommodation) \\
+\hline
+Can learn from outside specialists or experts & Lost working time and potential output \\
+\hline
+Employees can be more confident when starting job & New employees may still need induction training \\
+\hline
+ & Employees may leave for better jobs with new skills \\
+\hline
+\end{tabular}
+\caption{Advantages and Disadvantages of Off-the-Job Training}
+\end{table}
+
+% ============================
+% CHAPTER 8: RECRUITMENT AND SELECTION
+% ============================
+\section{Recruitment and Selection}
+
+\begin{definitionbox}
+\textbf{Recruitment} is the process from identifying that the business needs to employ someone up to the point where applications have arrived at the business.
+\end{definitionbox}
+
+\subsection{When Does a Vacancy Arise?}
+
+A vacancy arises when an employee:
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{user-minus}}]
+    \item Resigns from a job
+    \item Is dismissed by the management
+\end{itemize}
+
+\subsection{The Recruitment Process}
+
+\subsubsection{Step 1: Job Analysis}
+
+\begin{keyconceptbox}
+A \textbf{job analysis} identifies and records the tasks and responsibilities relating to the job. It will tell the managers what the job post is for.
+\end{keyconceptbox}
+
+\subsubsection{Step 2: Job Description}
+
+\begin{definitionbox}
+A \textbf{job description} outlines the responsibilities and duties to be carried out by someone employed to do the job.
+\end{definitionbox}
+
+A job description includes:
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{file-contract}}]
+    \item Conditions of employment (salary, working hours, pension scheme)
+    \item Training offered
+    \item Opportunities for promotion
+\end{itemize}
+
+This is given to all prospective candidates so they know exactly what they will be required and expected to do.
+
+\subsubsection{Step 3: Job Specification}
+
+\begin{definitionbox}
+A \textbf{job specification} is a document that outlines the requirements, qualifications, expertise, skills, physical/personal characteristics etc. required by an employee to be able to take up the job.
+\end{definitionbox}
+
+\subsection{Advertising the Vacancy}
+
+\subsubsection{Internal Recruitment}
+
+\begin{definitionbox}
+\textbf{Internal recruitment} is when a vacancy is filled by an \textbf{existing employee} of the business.
+\end{definitionbox}
+
+\begin{advantagebox}
+\begin{itemize}
+    \item Saves time and money --- no need for advertising and interviewing
+    \item Person already known to business
+    \item Person knows business's ways of working
+    \item Motivating for other employees to see colleagues being promoted
+\end{itemize}
+\end{advantagebox}
+
+\begin{disadvantagebox}
+\begin{itemize}
+    \item No new skills and experience coming into the business
+    \item Jealousy among workers
+\end{itemize}
+\end{disadvantagebox}
+
+\subsubsection{External Recruitment}
+
+\begin{definitionbox}
+\textbf{External recruitment} is when a vacancy is filled by someone who is \textbf{not an existing employee} and will be new to the business.
+\end{definitionbox}
+
+\textbf{Methods of External Advertising:}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{newspaper}}]
+    \item Local/national newspapers
+    \item Specialist magazines and journals
+    \item Job centres run by the government
+    \item Recruitment agencies
+\end{itemize}
+
+\begin{importantbox}
+When advertising a job, the business needs to consider:
+\begin{itemize}
+    \item What should be included in the advertisement
+    \item Where it should be advertised
+    \item How much it will cost
+    \item Whether it will be cost-effective
+\end{itemize}
+\end{importantbox}
+
+\subsubsection{Curriculum Vitae (CV)}
+
+When a person is interested in a job, they should apply by sending in a \textbf{curriculum vitae (CV)} or resume, which includes:
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{user-circle}}]
+    \item Qualifications
+    \item Experience
+    \item Qualities and skills
+    \item Statements about why they want the job
+    \item Why they feel suitable for the job
+\end{itemize}
+
+\subsection{Selection Process}
+
+\begin{keyconceptbox}
+Applicants who are \textbf{shortlisted} will be interviewed by the H.R. manager. They will also call up the \textbf{referee} provided by the applicant (a referee could be the previous employer or colleagues who can give a confidential opinion about the applicant's reliability, honesty, and suitability for the job).
+\end{keyconceptbox}
+
+\subsubsection{What Interviews Assess}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{clipboard-check}}]
+    \item The applicant's ability to do the job
+    \item Personal qualities of the applicant
+    \item Character and personality of applicant
+\end{itemize}
+
+\subsubsection{Selection Tests}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{tasks}}]
+    \item \textbf{Skills tests} --- Ability to do the job
+    \item \textbf{Aptitude tests} --- Candidate's potential to gain additional skills
+    \item \textbf{Personality tests} --- What kind of personality the candidate has
+    \item \textbf{Group situation tests} --- How they manage and work in teams
+\end{itemize}
+
+\subsection{Contract of Employment}
+
+\begin{definitionbox}
+The \textbf{contract of employment} is a legal agreement between the employer and the employee listing the rights and responsibilities of workers.
+\end{definitionbox}
+
+\textbf{A Contract of Employment Includes:}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{file-signature}}]
+    \item Name of employer and employee
+    \item Job title
+    \item Date when employment will begin
+    \item Hours to work
+    \item Rate of pay and other benefits
+    \item When payment is made
+    \item Holiday entitlement
+    \item Notice period required to terminate employment
+\end{itemize}
+
+\subsection{Part-Time vs Full-Time Employment}
+
+\begin{keyconceptbox}
+\begin{itemize}
+    \item \textbf{Part-time employment:} 1 to 30--35 hours a week
+    \item \textbf{Full-time employment:} 35 hours or more a week
+\end{itemize}
+\end{keyconceptbox}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\multicolumn{2}{|c|}{\textcolor{white}{\textbf{Part-Time Employment}}} \\
+\hline
+\rowcolor{accentgreen!20}
+\textbf{Advantages to Employer} & \rowcolor{accentred!20}\textbf{Disadvantages to Employer} \\
+\hline
+More flexible hours of work & Less likely to be trained (workers see job as temporary) \\
+\hline
+Easier to ask employees to work at busy times & Takes longer to recruit two part-time workers than one full-time worker \\
+\hline
+Easier to extend business opening hours & Can be less committed to the business \\
+\hline
+Workers accept lower pay for lesser hours & Less likely to be promoted \\
+\hline
+Less expensive than full-time workers & More difficult to communicate when not in work \\
+\hline
+\end{tabular}
+\caption{Part-Time Employment: Advantages and Disadvantages}
+\end{table}
+
+% ============================
+% CHAPTER 9: PRIVATISATION
+% ============================
+\section{Privatisation}
+
+\begin{definitionbox}
+\textbf{Privatisation} is the process of transferring an enterprise or industry from the \textbf{public sector} to the \textbf{private sector}.
+\end{definitionbox}
+
+\begin{examplebox}
+Examples of privatised services:
+\begin{itemize}
+    \item Airport operation
+    \item Data processing
+    \item Vehicle maintenance
+\end{itemize}
+\end{examplebox}
+
+\subsection{Potential Benefits of Privatisation}
+
+\begin{advantagebox}
+\begin{enumerate}[label=\textcolor{accentgreen}{\arabic*.}]
+    \item \textbf{Improved Efficiency} --- Private companies have a profit incentive to cut costs and be more efficient
+    
+    \item \textbf{Lack of Political Interference} --- Governments are motivated by political pressures rather than sound economic and business sense
+    
+    \item \textbf{Shareholder Pressure} --- A private firm has pressure from shareholders to perform efficiently. If inefficient, the firm could be subject to a takeover
+    
+    \item \textbf{Increased Competition} --- Privatisation often occurs alongside deregulation, allowing more firms to enter the industry and increase market competitiveness
+\end{enumerate}
+\end{advantagebox}
+
+\subsection{Disadvantages of Privatisation}
+
+\begin{disadvantagebox}
+\begin{enumerate}[label=\textcolor{accentred}{\arabic*.}]
+    \item \textbf{Natural Monopoly} --- When the most efficient number of firms in an industry is one (e.g., tap water has significant fixed costs, leaving no scope for competition)
+    
+    \item \textbf{Public Interest} --- Industries like health care, education, and public transport perform important public services where profit shouldn't be the primary objective
+    
+    \item \textbf{Government Loses Dividends} --- Many privatised companies are profitable, meaning the government misses out on dividends that go to wealthy shareholders
+    
+    \item \textbf{Regulation of Private Monopolies} --- Privatisation creates private monopolies (like water and rail companies) that need regulating to prevent abuse of monopoly power
+\end{enumerate}
+\end{disadvantagebox}
+
+% ============================
+% CHAPTER 10: RETAILERS
+% ============================
+\section{Retailers}
+
+\begin{definitionbox}
+\textbf{Retailers} are the final link in the channel of distribution. A retailer purchases in bulk from the wholesalers and sells the products to the customers in small quantities.
+\end{definitionbox}
+
+\begin{keyconceptbox}
+The aim of a retailer is to achieve \textbf{maximum customer satisfaction} by exceeding their expectations and delivering exceptional services.
+\end{keyconceptbox}
+
+\subsection{Services Provided by Retailers}
+
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{shopping-cart}}]
+    \item To provide the goods that consumers want
+    \item To provide goods in suitable quantity for consumers
+    \item To provide the goods when customers want them
+    \item Providing credit facilities
+    \item Advertising and window displays
+    \item Introducing new products
+\end{itemize}
+
+% ============================
+% CHAPTER 11: INTERNATIONAL TRADE
+% ============================
+\section{International Trade}
+
+\begin{definitionbox}
+\textbf{International trade} is the exchange of services, goods, and capital among various countries and regions, without much hindrance. International trade accounts for a good part of a country's gross domestic product.
+\end{definitionbox}
+
+\begin{keyconceptbox}
+International trade has flourished over the years due to:
+\begin{itemize}
+    \item Modern production techniques
+    \item Highly advanced transportation systems
+    \item Transnational corporations
+    \item Outsourcing of manufacturing and services
+    \item Rapid industrialisation
+\end{itemize}
+\end{keyconceptbox}
+
+\subsection{Benefits of International Trade}
+
+\begin{advantagebox}
+\begin{itemize}[label=\textcolor{accentgreen}{\faIcon{globe}}]
+    \item Enhancing the domestic competitiveness
+    \item Taking advantage of international trade technology
+    \item Increasing sales and profits
+    \item Extending sales potential of existing products
+    \item Maintaining cost competitiveness in the domestic market
+    \item Enhancing potential for expansion of business
+    \item Gaining a global market share
+    \item Reducing dependence on existing markets
+    \item Stabilising seasonal market fluctuations
+\end{itemize}
+\end{advantagebox}
+
+\subsection{Imports and Exports}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{primaryblue}
+\textcolor{white}{\textbf{Imports}} & \textcolor{white}{\textbf{Exports}} \\
+\hline
+Foreign goods entering a domestic economy & Home products moving to foreign countries \\
+\hline
+\multicolumn{2}{|c|}{Both are crucial for business effectiveness and competition} \\
+\hline
+\end{tabular}
+\caption{Imports vs Exports}
+\end{table}
+
+\subsection{Visible and Invisible Trade}
+
+\begin{keyconceptbox}
+\begin{itemize}
+    \item \textbf{Visible trade} --- Trade in \textbf{goods} between countries
+    \item \textbf{Invisible trade} --- Trade in \textbf{services} between countries
+\end{itemize}
+\end{keyconceptbox}
+
+\subsubsection{Balance of Trade Calculations}
+
+\begin{tcolorbox}[colback=lightblue, colframe=primaryblue, title=\textbf{Balance of Trade Formulas}]
+\textbf{Balance of Trade (Visible Balance):}
+\[ \text{Visible Exports} - \text{Visible Imports} \]
+
+\textbf{Invisible Balance:}
+\[ \text{Invisible Exports} - \text{Invisible Imports} \]
+
+\textbf{Balance of Payments on Current Account:}
+\[ (\text{Visible Exports} + \text{Invisible Exports}) - (\text{Visible Imports} + \text{Invisible Imports}) \]
+
+\begin{itemize}
+    \item \textbf{Deficit} = Loss in the balance of payments
+    \item \textbf{Surplus} = Profit in the balance of payments
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Trade Blocs}
+
+\begin{definitionbox}
+A \textbf{trade bloc} is a type of intergovernmental agreement, often part of a regional intergovernmental organisation, where barriers to trade (tariffs and others) are reduced or eliminated among the participating states.
+\end{definitionbox}
+
+\subsubsection{Types of Trade Blocs}
+\begin{enumerate}[label=\textcolor{primaryblue}{\arabic*.}]
+    \item Preferential trading areas
+    \item Free-trade areas
+    \item Customs unions
+    \item Common markets
+    \item Economic and monetary unions
+\end{enumerate}
+
+\begin{examplebox}
+Examples of Trade Blocs:
+\begin{itemize}
+    \item North American Free Trade Agreement (NAFTA)
+    \item European Union (EU)
+\end{itemize}
+\end{examplebox}
+
+\subsubsection{Benefits of Trade Blocs}
+\begin{itemize}[label=\textcolor{primaryblue}{\faIcon{handshake}}]
+    \item Removal of tariffs within trading bloc countries
+    \item Common external tariff
+    \item Free movement of labour, capital, and goods
+    \item Better scope for improvement and market share
+\end{itemize}
+
+\subsection{Difficulties Facing Exporters}
+
+\begin{importantbox}
+Common problems faced by exporters worldwide:
+\begin{itemize}[label=\textcolor{accentorange}{\faIcon{exclamation-circle}}]
+    \item Language barriers
+    \item Distance
+    \item Methods of payment
+    \item Differing consumer wants
+    \item Documentation requirements
+    \item Currency exchange issues
+\end{itemize}
+\end{importantbox}
+
+\subsection{Multinational Corporations}
+
+\begin{definitionbox}
+\textbf{Multinationals} are companies with significant production operations in at least two countries.
+\end{definitionbox}
+
+\begin{examplebox}
+Examples: Shell, DHL
+\end{examplebox}
+
+\begin{advantagebox}
+\textbf{Benefits of Multinationals:}
+\begin{itemize}
+    \item Employment increases in the country
+    \item Competition benefits as businesses can expand
+    \item Training facilities increase for local labour force
+    \item World-class goods become cheaper
+    \item Many countries can enjoy products from different countries
+\end{itemize}
+\end{advantagebox}
+
+\begin{disadvantagebox}
+\textbf{Drawbacks of Multinationals:}
+\begin{itemize}
+    \item \textbf{Outflows of money} --- Home country takes back most of their finance
+    \item \textbf{Worsening balance of payments} --- Multinational remits (sends) profits to its home country
+\end{itemize}
+\end{disadvantagebox}
+
+% ============================
+% SUMMARY
+% ============================
+\section{Summary}
+
+\begin{tcolorbox}[colback=lightgray, colframe=darkgray, title=\textbf{\faIcon{list-check} Key Takeaways}]
+\begin{enumerate}[label=\textcolor{primaryblue}{\arabic*.}]
+    \item \textbf{Business Studies} combines accountancy, finance, marketing, HR, and operations
+    \item Understanding \textbf{needs vs wants} is essential for wise financial decisions
+    \item \textbf{Business types} include sole traders, partnerships, and limited companies
+    \item \textbf{Incorporated businesses} have limited liability and separate legal identity
+    \item \textbf{Stakeholders} can be internal or external to an organization
+    \item The \textbf{three sectors} (primary, secondary, tertiary) form the chain of production
+    \item \textbf{Training} enhances employee skills, knowledge, and abilities
+    \item \textbf{Recruitment} involves job analysis, description, specification, and selection
+    \item \textbf{Privatisation} transfers enterprises from public to private sector
+    \item \textbf{International trade} facilitates global exchange of goods, services, and capital
+\end{enumerate}
+\end{tcolorbox}
+
+\end{document}

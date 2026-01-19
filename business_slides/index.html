@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Studies - Interactive Learning for Class 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <span class="progress-text" id="progressText">1 / 24</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="slide-nav">
+        <button class="nav-btn prev-btn" id="prevBtn" disabled>
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-btn next-btn" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </nav>
+
+    <!-- Menu Toggle -->
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Side Menu -->
+    <aside class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <h3><i class="fas fa-book-open"></i> Topics</h3>
+            <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="topic-list" id="topicList"></ul>
+    </aside>
+
+    <!-- Slides Container -->
+    <main class="slides-container" id="slidesContainer">
+        
+        <!-- Slide 1: Title -->
+        <section class="slide active" data-slide="0" data-color="gradient-blue">
+            <div class="slide-content title-slide">
+                <!-- Animated Particles Background -->
+                <div class="particles" id="particles">
+                    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+                    <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+                    <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+                    <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+                    <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+                    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+                    <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+                    <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+                    <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
+                </div>
+                
+                <div class="floating-icons">
+                    <i class="fas fa-briefcase float-icon"></i>
+                    <i class="fas fa-chart-line float-icon"></i>
+                    <i class="fas fa-coins float-icon"></i>
+                    <i class="fas fa-handshake float-icon"></i>
+                    <i class="fas fa-building float-icon"></i>
+                    <i class="fas fa-globe float-icon"></i>
+                </div>
+                
+                <!-- Animated SVG Illustration -->
+                <div class="animated-illustration hero-illustration">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Animated Building -->
+                        <g class="svg-float" style="animation-delay: 0s;">
+                            <rect x="150" y="100" width="100" height="150" rx="5" fill="rgba(255,255,255,0.2)"/>
+                            <rect x="165" y="120" width="20" height="25" rx="2" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="195" y="120" width="20" height="25" rx="2" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="225" y="120" width="20" height="25" rx="2" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="165" y="160" width="20" height="25" rx="2" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="195" y="160" width="20" height="25" rx="2" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="225" y="160" width="20" height="25" rx="2" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="185" y="210" width="30" height="40" rx="2" fill="rgba(255,255,255,0.5)"/>
+                        </g>
+                        <!-- Animated Coin 1 -->
+                        <g class="svg-bounce" style="animation-delay: 0.3s;">
+                            <circle cx="80" cy="80" r="25" fill="#ffd700" opacity="0.8"/>
+                            <text x="80" y="87" text-anchor="middle" fill="#333" font-size="20" font-weight="bold">$</text>
+                        </g>
+                        <!-- Animated Coin 2 -->
+                        <g class="svg-bounce" style="animation-delay: 0.6s;">
+                            <circle cx="320" cy="100" r="20" fill="#ffd700" opacity="0.8"/>
+                            <text x="320" y="106" text-anchor="middle" fill="#333" font-size="16" font-weight="bold">$</text>
+                        </g>
+                        <!-- Animated Chart -->
+                        <g class="svg-pulse" style="animation-delay: 0.9s;">
+                            <polyline points="50,200 90,180 130,190 170,150" stroke="rgba(255,255,255,0.6)" stroke-width="3" fill="none"/>
+                            <circle cx="50" cy="200" r="5" fill="#10b981"/>
+                            <circle cx="90" cy="180" r="5" fill="#10b981"/>
+                            <circle cx="130" cy="190" r="5" fill="#10b981"/>
+                            <circle cx="170" cy="150" r="5" fill="#10b981"/>
+                        </g>
+                        <!-- Animated Rocket -->
+                        <g class="svg-float" style="animation-delay: 1.2s;">
+                            <path d="M330 180 L350 150 L370 180 L360 180 L360 210 L340 210 L340 180 Z" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="350" cy="170" r="8" fill="rgba(99,102,241,0.8)"/>
+                            <path d="M345 210 L350 230 L355 210" fill="#f59e0b"/>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="welcome-badge animate-pulse">
+                    <span>📚 Class 7 Edition</span>
+                </div>
+                <h1 class="main-title sparkle">
+                    <span class="title-line">Business Studies</span>
+                    <span class="title-sub">Interactive Learning Adventure! 🚀</span>
+                </h1>
+                <p class="tagline">Learn the exciting world of business in a fun and easy way!</p>
+                <div class="feature-pills">
+                    <span class="pill hover-lift"><i class="fas fa-play-circle"></i> 24 Slides</span>
+                    <span class="pill hover-lift"><i class="fas fa-clock"></i> Learn at your pace</span>
+                    <span class="pill hover-lift"><i class="fas fa-star"></i> Interactive</span>
+                </div>
+                <button class="start-btn animate-glow" id="startBtn">
+                    <span>Let's Start Learning!</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Slide 2: What is Business Studies -->
+        <section class="slide" data-slide="1" data-color="gradient-purple">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Introduction</span>
+                </div>
+                <h2 class="slide-title">📖 What is Business Studies?</h2>
+                <div class="content-grid">
+                    <div class="visual-box">
+                        <!-- Animated Books and Learning SVG -->
+                        <div class="animated-illustration">
+                            <svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Stack of Books -->
+                                <g class="svg-float">
+                                    <rect x="80" y="160" width="140" height="25" rx="3" fill="#ef4444"/>
+                                    <rect x="75" y="135" width="150" height="25" rx="3" fill="#f59e0b"/>
+                                    <rect x="85" y="110" width="130" height="25" rx="3" fill="#10b981"/>
+                                    <rect x="70" y="85" width="160" height="25" rx="3" fill="#6366f1"/>
+                                </g>
+                                <!-- Animated Light Bulb -->
+                                <g class="svg-pulse" style="animation-delay: 0.5s;">
+                                    <circle cx="150" cy="45" r="25" fill="#ffd700" opacity="0.8"/>
+                                    <path d="M150 70 L150 80" stroke="#ffd700" stroke-width="4"/>
+                                    <path d="M140 80 L160 80" stroke="#ffd700" stroke-width="4"/>
+                                    <!-- Light rays -->
+                                    <line x1="150" y1="10" x2="150" y2="0" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
+                                    <line x1="180" y1="45" x2="190" y2="45" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
+                                    <line x1="120" y1="45" x2="110" y2="45" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
+                                    <line x1="170" y1="25" x2="180" y2="15" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
+                                    <line x1="130" y1="25" x2="120" y2="15" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
+                                </g>
+                                <!-- Floating Stars -->
+                                <g class="svg-bounce" style="animation-delay: 0.3s;">
+                                    <polygon points="50,50 53,60 63,60 55,67 58,77 50,70 42,77 45,67 37,60 47,60" fill="#ffd700" opacity="0.7"/>
+                                </g>
+                                <g class="svg-bounce" style="animation-delay: 0.9s;">
+                                    <polygon points="250,70 252,77 260,77 254,82 256,89 250,84 244,89 246,82 240,77 248,77" fill="#ffd700" opacity="0.7"/>
+                                </g>
+                                <!-- Pencil -->
+                                <g class="svg-wiggle" style="transform-origin: center;">
+                                    <rect x="240" y="130" width="15" height="80" rx="2" fill="#f59e0b" transform="rotate(25 247 170)"/>
+                                    <polygon points="245,207 247,225 250,207" fill="#ffb6c1" transform="rotate(25 247 216)"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="icon-showcase animated">
+                            <div class="icon-item bounce-in card-animated hover-lift"><i class="fas fa-calculator"></i><span>Accountancy</span></div>
+                            <div class="icon-item bounce-in card-animated hover-lift"><i class="fas fa-money-bill-wave"></i><span>Finance</span></div>
+                            <div class="icon-item bounce-in card-animated hover-lift"><i class="fas fa-bullhorn"></i><span>Marketing</span></div>
+                            <div class="icon-item bounce-in card-animated hover-lift"><i class="fas fa-users"></i><span>HR Management</span></div>
+                            <div class="icon-item bounce-in card-animated hover-lift"><i class="fas fa-cogs"></i><span>Operations</span></div>
+                            <div class="icon-item bounce-in card-animated hover-lift"><i class="fas fa-chart-pie"></i><span>Organization</span></div>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="definition-card glow animate-glow">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p><strong>Business Studies</strong> is a subject taught in schools that combines many exciting topics to help you understand how businesses work!</p>
+                        </div>
+                        <div class="key-point hover-scale">
+                            <i class="fas fa-lightbulb animate-pulse"></i>
+                            <span>It gives you a complete overview of how to run a successful business! 🎯</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: What is a Business -->
+        <section class="slide" data-slide="2" data-color="gradient-green">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-store"></i>
+                    <span>Basics</span>
+                </div>
+                <h2 class="slide-title">🏢 What is a Business?</h2>
+                
+                <!-- Animated City Scene SVG -->
+                <div class="animated-illustration city-scene" style="max-width: 500px;">
+                    <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background Buildings -->
+                        <rect x="20" y="80" width="60" height="120" rx="3" fill="rgba(255,255,255,0.15)" class="svg-float"/>
+                        <rect x="90" y="60" width="50" height="140" rx="3" fill="rgba(255,255,255,0.2)" class="svg-float" style="animation-delay: 0.3s;"/>
+                        <rect x="150" y="40" width="70" height="160" rx="3" fill="rgba(255,255,255,0.25)" class="svg-float" style="animation-delay: 0.5s;"/>
+                        <rect x="230" y="70" width="55" height="130" rx="3" fill="rgba(255,255,255,0.2)" class="svg-float" style="animation-delay: 0.7s;"/>
+                        <rect x="295" y="50" width="65" height="150" rx="3" fill="rgba(255,255,255,0.22)" class="svg-float" style="animation-delay: 0.9s;"/>
+                        <rect x="370" y="90" width="50" height="110" rx="3" fill="rgba(255,255,255,0.18)" class="svg-float" style="animation-delay: 1.1s;"/>
+                        <rect x="430" y="70" width="50" height="130" rx="3" fill="rgba(255,255,255,0.2)" class="svg-float" style="animation-delay: 1.3s;"/>
+                        
+                        <!-- Windows (animated glow) -->
+                        <rect x="160" y="55" width="15" height="15" fill="#ffd700" opacity="0.8" class="svg-pulse"/>
+                        <rect x="185" y="55" width="15" height="15" fill="#ffd700" opacity="0.6" class="svg-pulse" style="animation-delay: 0.2s;"/>
+                        <rect x="160" y="80" width="15" height="15" fill="#ffd700" opacity="0.7" class="svg-pulse" style="animation-delay: 0.4s;"/>
+                        <rect x="305" y="65" width="12" height="12" fill="#ffd700" opacity="0.8" class="svg-pulse" style="animation-delay: 0.6s;"/>
+                        <rect x="325" y="85" width="12" height="12" fill="#ffd700" opacity="0.7" class="svg-pulse" style="animation-delay: 0.8s;"/>
+                        
+                        <!-- Dollar Signs floating -->
+                        <text x="70" y="50" fill="#10b981" font-size="24" font-weight="bold" class="svg-bounce">$</text>
+                        <text x="280" y="30" fill="#10b981" font-size="20" font-weight="bold" class="svg-bounce" style="animation-delay: 0.5s;">$</text>
+                        <text x="400" y="45" fill="#10b981" font-size="22" font-weight="bold" class="svg-bounce" style="animation-delay: 1s;">$</text>
+                        
+                        <!-- Sun -->
+                        <circle cx="450" cy="30" r="20" fill="#ffd700" opacity="0.8" class="svg-pulse"/>
+                    </svg>
+                </div>
+                
+                <div class="definition-hero">
+                    <div class="definition-card big animate-glow">
+                        <p>A <strong>business</strong> is an organization that provides goods or services to make money or help society!</p>
+                    </div>
+                </div>
+                <div class="business-types-row">
+                    <div class="business-type-card profit card-animated hover-lift">
+                        <div class="card-emoji animate-bounce">💰</div>
+                        <h4>For-Profit Business</h4>
+                        <p>Organizations that work to earn money</p>
+                        <div class="examples-mini">Like: Shops, Restaurants, Banks</div>
+                    </div>
+                    <div class="business-type-card nonprofit card-animated hover-lift">
+                        <div class="card-emoji animate-bounce" style="animation-delay: 0.3s;">❤️</div>
+                        <h4>Non-Profit Business</h4>
+                        <p>Organizations that help people and society</p>
+                        <div class="examples-mini">Like: Charities, Schools, Hospitals</div>
+                    </div>
+                </div>
+                <div class="fun-fact rainbow animate-glow">
+                    <i class="fas fa-star animate-rotate"></i>
+                    <span>Businesses range from tiny shops run by one person to HUGE companies operating in 100+ countries!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: How to Start a Business -->
+        <section class="slide" data-slide="3" data-color="gradient-orange">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-rocket"></i>
+                    <span>Getting Started</span>
+                </div>
+                <h2 class="slide-title">🚀 How to Start a Business?</h2>
+                
+                <!-- Animated Rocket Launch SVG -->
+                <div class="animated-illustration rocket-scene" style="max-width: 200px; position: absolute; top: 100px; right: 50px;">
+                    <svg viewBox="0 0 150 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Rocket -->
+                        <g class="svg-float">
+                            <path d="M75 20 L95 70 L95 120 L75 140 L55 120 L55 70 Z" fill="rgba(255,255,255,0.9)"/>
+                            <circle cx="75" cy="70" r="15" fill="#6366f1"/>
+                            <rect x="65" y="90" width="20" height="20" rx="2" fill="#ef4444"/>
+                            <!-- Fins -->
+                            <path d="M55 100 L40 130 L55 120" fill="#6366f1"/>
+                            <path d="M95 100 L110 130 L95 120" fill="#6366f1"/>
+                        </g>
+                        <!-- Flames -->
+                        <g class="svg-pulse">
+                            <ellipse cx="75" cy="155" rx="15" ry="25" fill="#f59e0b" opacity="0.9"/>
+                            <ellipse cx="75" cy="165" rx="10" ry="20" fill="#ffd700" opacity="0.8"/>
+                            <ellipse cx="75" cy="175" rx="5" ry="15" fill="#fff" opacity="0.6"/>
+                        </g>
+                        <!-- Stars -->
+                        <circle cx="30" cy="40" r="2" fill="#fff" class="svg-pulse"/>
+                        <circle cx="120" cy="30" r="3" fill="#fff" class="svg-pulse" style="animation-delay: 0.5s;"/>
+                        <circle cx="20" cy="100" r="2" fill="#fff" class="svg-pulse" style="animation-delay: 1s;"/>
+                        <circle cx="130" cy="90" r="2" fill="#fff" class="svg-pulse" style="animation-delay: 1.5s;"/>
+                    </svg>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step-card card-animated hover-lift">
+                        <div class="step-number">1</div>
+                        <div class="step-icon animate-bounce"><i class="fas fa-search"></i></div>
+                        <h4>Market Research</h4>
+                        <p>Find out what people want to buy!</p>
+                    </div>
+                    <div class="step-card card-animated hover-lift">
+                        <div class="step-number">2</div>
+                        <div class="step-icon animate-bounce" style="animation-delay: 0.1s;"><i class="fas fa-file-alt"></i></div>
+                        <h4>Business Plan</h4>
+                        <p>Write down your ideas and goals</p>
+                    </div>
+                    <div class="step-card card-animated hover-lift">
+                        <div class="step-number">3</div>
+                        <div class="step-icon animate-bounce" style="animation-delay: 0.2s;"><i class="fas fa-piggy-bank"></i></div>
+                        <h4>Get Funding</h4>
+                        <p>Collect money to start your business</p>
+                    </div>
+                    <div class="step-card card-animated hover-lift">
+                        <div class="step-number">4</div>
+                        <div class="step-icon animate-bounce" style="animation-delay: 0.3s;"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Choose Location</h4>
+                        <p>Pick the perfect spot for your business</p>
+                    </div>
+                    <div class="step-card card-animated hover-lift">
+                        <div class="step-number">5</div>
+                        <div class="step-icon animate-bounce" style="animation-delay: 0.4s;"><i class="fas fa-pen"></i></div>
+                        <h4>Register Business</h4>
+                        <p>Make it official with paperwork!</p>
+                    </div>
+                    <div class="step-card card-animated hover-lift">
+                        <div class="step-number">6</div>
+                        <div class="step-icon animate-bounce" style="animation-delay: 0.5s;"><i class="fas fa-university"></i></div>
+                        <h4>Open Bank Account</h4>
+                        <p>Set up banking for your business</p>
+                    </div>
+                </div>
+                <div class="tip-box animate-glow">
+                    <i class="fas fa-lightbulb animate-pulse"></i>
+                    <span>Pro Tip: A good business plan is like a map that guides you to success! 🗺️</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Needs vs Wants -->
+        <section class="slide" data-slide="4" data-color="gradient-pink">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Important Concept</span>
+                </div>
+                <h2 class="slide-title">⚖️ Needs vs Wants</h2>
+                
+                <!-- Animated Balance Scale SVG -->
+                <div class="animated-illustration balance-scale" style="max-width: 300px;">
+                    <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Center pole -->
+                        <rect x="145" y="40" width="10" height="100" fill="rgba(255,255,255,0.6)"/>
+                        <circle cx="150" cy="35" r="12" fill="#ffd700" class="svg-pulse"/>
+                        
+                        <!-- Balance beam -->
+                        <g class="svg-swing" style="transform-origin: 150px 35px; animation: swing 3s ease-in-out infinite;">
+                            <rect x="30" y="30" width="240" height="10" rx="5" fill="rgba(255,255,255,0.7)"/>
+                            
+                            <!-- Left pan (Needs) -->
+                            <line x1="50" y1="40" x2="50" y2="70" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                            <ellipse cx="50" cy="85" rx="35" ry="15" fill="rgba(16, 185, 129, 0.6)"/>
+                            <text x="50" y="90" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">NEEDS</text>
+                            <!-- Icons on needs pan -->
+                            <text x="35" y="75" font-size="12">🏠</text>
+                            <text x="50" y="75" font-size="12">🍎</text>
+                            <text x="65" y="75" font-size="12">💧</text>
+                            
+                            <!-- Right pan (Wants) -->
+                            <line x1="250" y1="40" x2="250" y2="70" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                            <ellipse cx="250" cy="85" rx="35" ry="15" fill="rgba(239, 68, 68, 0.6)"/>
+                            <text x="250" y="90" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">WANTS</text>
+                            <!-- Icons on wants pan -->
+                            <text x="235" y="75" font-size="12">🎮</text>
+                            <text x="250" y="75" font-size="12">🚗</text>
+                            <text x="265" y="75" font-size="12">💎</text>
+                        </g>
+                        
+                        <!-- Base -->
+                        <path d="M120 140 L150 120 L180 140 Z" fill="rgba(255,255,255,0.5)"/>
+                    </svg>
+                </div>
+                
+                <div class="comparison-container">
+                    <div class="comparison-box needs-box card-animated hover-lift">
+                        <div class="box-header"><i class="fas fa-check-circle animate-pulse"></i> NEEDS</div>
+                        <p class="description">Things you <strong>MUST</strong> have to survive!</p>
+                        <div class="items-grid">
+                            <div class="item hover-scale"><i class="fas fa-utensils"></i><span>Food</span></div>
+                            <div class="item hover-scale"><i class="fas fa-tint"></i><span>Water</span></div>
+                            <div class="item hover-scale"><i class="fas fa-wind"></i><span>Oxygen</span></div>
+                            <div class="item hover-scale"><i class="fas fa-home"></i><span>Shelter</span></div>
+                            <div class="item hover-scale"><i class="fas fa-tshirt"></i><span>Clothes</span></div>
+                            <div class="item hover-scale"><i class="fas fa-medkit"></i><span>Healthcare</span></div>
+                        </div>
+                        <div class="need-types">
+                            <span class="need-type physical"><i class="fas fa-running"></i> Physical Needs</span>
+                            <span class="need-type mental"><i class="fas fa-brain"></i> Psychological Needs (love, security)</span>
+                        </div>
+                    </div>
+                    <div class="vs-circle pulse animate-pulse">
+                        <span>VS</span>
+                    </div>
+                    <div class="comparison-box wants-box card-animated hover-lift">
+                        <div class="box-header"><i class="fas fa-heart animate-pulse"></i> WANTS</div>
+                        <p class="description">Things you <strong>DESIRE</strong> but can live without!</p>
+                        <div class="items-grid">
+                            <div class="item hover-scale"><i class="fas fa-car"></i><span>Fancy Car</span></div>
+                            <div class="item hover-scale"><i class="fas fa-gamepad"></i><span>Video Games</span></div>
+                            <div class="item hover-scale"><i class="fas fa-plane"></i><span>Vacation</span></div>
+                            <div class="item hover-scale"><i class="fas fa-gem"></i><span>Jewelry</span></div>
+                            <div class="item hover-scale"><i class="fas fa-mobile-alt"></i><span>Latest Phone</span></div>
+                            <div class="item hover-scale"><i class="fas fa-ice-cream"></i><span>Ice Cream</span></div>
+                        </div>
+                        <div class="want-note">
+                            <i class="fas fa-info-circle"></i> Wants change as you grow older!
+                        </div>
+                    </div>
+                </div>
+                <div class="remember-box animate-glow">
+                    <i class="fas fa-brain animate-wiggle"></i>
+                    <span>Remember: Knowing the difference helps you spend and save money wisely! 💡</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Consumer vs Producer Goods -->
+        <section class="slide" data-slide="5" data-color="gradient-teal">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-box"></i>
+                    <span>Types of Goods</span>
+                </div>
+                <h2 class="slide-title">📦 Consumer vs Producer Goods</h2>
+                
+                <!-- Animated Factory to Store SVG -->
+                <div class="animated-illustration goods-flow" style="max-width: 400px;">
+                    <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Factory -->
+                        <g class="svg-float">
+                            <rect x="20" y="50" width="80" height="60" rx="3" fill="rgba(255,255,255,0.3)"/>
+                            <rect x="35" y="20" width="20" height="30" fill="rgba(255,255,255,0.4)"/>
+                            <rect x="65" y="25" width="15" height="25" fill="rgba(255,255,255,0.35)"/>
+                            <!-- Smoke -->
+                            <circle cx="45" cy="10" r="8" fill="rgba(255,255,255,0.2)" class="svg-float"/>
+                            <circle cx="55" cy="5" r="6" fill="rgba(255,255,255,0.15)" class="svg-float" style="animation-delay: 0.3s;"/>
+                        </g>
+                        
+                        <!-- Arrow -->
+                        <g class="svg-pulse">
+                            <line x1="110" y1="80" x2="150" y2="80" stroke="rgba(255,255,255,0.6)" stroke-width="4"/>
+                            <polygon points="150,75 165,80 150,85" fill="rgba(255,255,255,0.6)"/>
+                        </g>
+                        
+                        <!-- Box (Product) moving -->
+                        <g class="svg-bounce">
+                            <rect x="175" y="70" width="25" height="25" rx="3" fill="#f59e0b"/>
+                            <text x="187" y="87" text-anchor="middle" fill="#fff" font-size="12">📦</text>
+                        </g>
+                        
+                        <!-- Arrow -->
+                        <g class="svg-pulse" style="animation-delay: 0.5s;">
+                            <line x1="210" y1="80" x2="250" y2="80" stroke="rgba(255,255,255,0.6)" stroke-width="4"/>
+                            <polygon points="250,75 265,80 250,85" fill="rgba(255,255,255,0.6)"/>
+                        </g>
+                        
+                        <!-- Store -->
+                        <g class="svg-float" style="animation-delay: 0.5s;">
+                            <rect x="280" y="45" width="90" height="65" rx="3" fill="rgba(255,255,255,0.3)"/>
+                            <rect x="310" y="75" width="30" height="35" fill="rgba(255,255,255,0.5)"/>
+                            <text x="325" y="60" text-anchor="middle" fill="#fff" font-size="10">SHOP</text>
+                            <!-- Awning -->
+                            <path d="M275 45 L370 45 L365 55 L280 55 Z" fill="#ef4444" opacity="0.7"/>
+                        </g>
+                        
+                        <!-- Happy customer -->
+                        <g class="svg-bounce" style="animation-delay: 1s;">
+                            <circle cx="385" cy="95" r="12" fill="rgba(255,255,255,0.5)"/>
+                            <text x="385" y="100" text-anchor="middle" font-size="14">😊</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="goods-comparison">
+                    <div class="goods-card consumer card-animated hover-lift">
+                        <div class="goods-icon animate-bounce"><i class="fas fa-shopping-cart"></i></div>
+                        <h3>Consumer Goods</h3>
+                        <p>Products bought by <strong>people</strong> to use themselves</p>
+                        <div class="goods-examples">
+                            <div class="example hover-scale"><i class="fas fa-tv"></i> TV</div>
+                            <div class="example hover-scale"><i class="fas fa-couch"></i> Furniture</div>
+                            <div class="example hover-scale"><i class="fas fa-apple-alt"></i> Food</div>
+                            <div class="example hover-scale"><i class="fas fa-shoe-prints"></i> Shoes</div>
+                        </div>
+                        <div class="goods-tagline">
+                            <i class="fas fa-user"></i> For Personal Use!
+                        </div>
+                    </div>
+                    <div class="goods-arrow animate-pulse">
+                        <div class="arrow-label">Different!</div>
+                    </div>
+                    <div class="goods-card producer card-animated hover-lift">
+                        <div class="goods-icon animate-bounce" style="animation-delay: 0.3s;"><i class="fas fa-industry"></i></div>
+                        <h3>Producer Goods</h3>
+                        <p>Products used to <strong>make other products</strong></p>
+                        <div class="goods-examples">
+                            <div class="example hover-scale"><i class="fas fa-cogs"></i> Machines</div>
+                            <div class="example hover-scale"><i class="fas fa-cube"></i> Raw Materials</div>
+                            <div class="example hover-scale"><i class="fas fa-tools"></i> Tools</div>
+                            <div class="example hover-scale"><i class="fas fa-truck"></i> Trucks</div>
+                        </div>
+                        <div class="goods-tagline">
+                            <i class="fas fa-hard-hat"></i> For Business Use!
+                        </div>
+                    </div>
+                </div>
+                <div class="example-chain animate-glow">
+                    <span class="chain-title">Example:</span>
+                    <div class="chain-items">
+                        <span class="hover-scale"><i class="fas fa-seedling"></i> Wheat (Producer Good)</span>
+                        <i class="fas fa-arrow-right animate-pulse"></i>
+                        <span class="hover-scale"><i class="fas fa-bread-slice"></i> Bread (Consumer Good)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Sole Trader -->
+        <section class="slide" data-slide="6" data-color="gradient-indigo">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-user"></i>
+                    <span>Business Types</span>
+                </div>
+                <h2 class="slide-title">👤 Sole Trader</h2>
+                
+                <!-- Animated Person Running Shop SVG -->
+                <div class="animated-illustration sole-trader-scene" style="max-width: 250px;">
+                    <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Shop -->
+                        <rect x="30" y="60" width="140" height="80" rx="5" fill="rgba(255,255,255,0.2)"/>
+                        <!-- Shop awning -->
+                        <path d="M25 60 L175 60 L170 75 L30 75 Z" fill="#f59e0b" opacity="0.8"/>
+                        <!-- Door -->
+                        <rect x="80" y="95" width="40" height="45" rx="3" fill="rgba(255,255,255,0.4)"/>
+                        <!-- Window left -->
+                        <rect x="40" y="80" width="30" height="30" rx="2" fill="rgba(255,255,255,0.3)" class="svg-pulse"/>
+                        <!-- Window right -->
+                        <rect x="130" y="80" width="30" height="30" rx="2" fill="rgba(255,255,255,0.3)" class="svg-pulse" style="animation-delay: 0.5s;"/>
+                        <!-- Sign -->
+                        <rect x="70" y="40" width="60" height="18" rx="3" fill="rgba(255,255,255,0.5)"/>
+                        <text x="100" y="53" text-anchor="middle" fill="#333" font-size="8" font-weight="bold">MY SHOP</text>
+                        
+                        <!-- Person (sole trader) -->
+                        <g class="svg-bounce">
+                            <circle cx="100" cy="125" r="10" fill="rgba(255,255,255,0.7)"/>
+                            <text x="100" y="130" text-anchor="middle" font-size="14">😊</text>
+                        </g>
+                        
+                        <!-- Coins floating -->
+                        <g class="svg-float" style="animation-delay: 0.2s;">
+                            <circle cx="35" cy="30" r="8" fill="#ffd700" opacity="0.8"/>
+                            <text x="35" y="34" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">$</text>
+                        </g>
+                        <g class="svg-float" style="animation-delay: 0.7s;">
+                            <circle cx="165" cy="25" r="7" fill="#ffd700" opacity="0.7"/>
+                            <text x="165" y="29" text-anchor="middle" fill="#333" font-size="9" font-weight="bold">$</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="centered-visual">
+                    <div class="character-box hover-lift">
+                        <div class="character animate-bounce">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="speech-bubble animate-glow">
+                            "I own and run my business all by myself! 💪"
+                        </div>
+                    </div>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item hover-scale">
+                        <i class="fas fa-users"></i>
+                        <span><strong>Owners:</strong> Just 1 person</span>
+                    </div>
+                    <div class="info-item hover-scale">
+                        <i class="fas fa-home"></i>
+                        <span><strong>Example:</strong> Family shops, plumbers</span>
+                    </div>
+                </div>
+                <div class="capital-sources">
+                    <h4><i class="fas fa-coins animate-bounce"></i> Where does money come from?</h4>
+                    <div class="source-tags">
+                        <span class="hover-scale">Personal Savings</span>
+                        <span class="hover-scale">Bank Loans</span>
+                        <span class="hover-scale">Mortgages</span>
+                        <span class="hover-scale">Past Profits</span>
+                    </div>
+                </div>
+                <div class="pros-cons">
+                    <div class="pros card-animated hover-lift">
+                        <h4><i class="fas fa-thumbs-up animate-bounce"></i> Advantages</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Easy to control</li>
+                            <li><i class="fas fa-check"></i> Less paperwork</li>
+                            <li><i class="fas fa-check"></i> Quick decisions</li>
+                            <li><i class="fas fa-check"></i> Keep ALL profits!</li>
+                        </ul>
+                    </div>
+                    <div class="cons card-animated hover-lift">
+                        <h4><i class="fas fa-thumbs-down animate-bounce" style="animation-delay: 0.3s;"></i> Disadvantages</h4>
+                        <ul>
+                            <li><i class="fas fa-times"></i> Unlimited liability 😟</li>
+                            <li><i class="fas fa-times"></i> Personal risk if business fails</li>
+                            <li><i class="fas fa-times"></i> Limited capital</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="warning-box animate-pulse">
+                    <i class="fas fa-exclamation-triangle animate-shake"></i>
+                    <span><strong>Unlimited Liability:</strong> If the business goes bankrupt, you might lose your personal belongings like car or house!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Partnership -->
+        <section class="slide" data-slide="7" data-color="gradient-red">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Business Types</span>
+                </div>
+                <h2 class="slide-title">🤝 Partnership</h2>
+                
+                <!-- Animated Handshake SVG -->
+                <div class="animated-illustration partnership-scene" style="max-width: 200px;">
+                    <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Person 1 -->
+                        <g class="svg-float">
+                            <circle cx="50" cy="40" r="20" fill="rgba(255,255,255,0.5)"/>
+                            <rect x="35" y="60" width="30" height="50" rx="5" fill="rgba(255,255,255,0.4)"/>
+                        </g>
+                        <!-- Person 2 -->
+                        <g class="svg-float" style="animation-delay: 0.3s;">
+                            <circle cx="150" cy="40" r="20" fill="rgba(255,255,255,0.5)"/>
+                            <rect x="135" y="60" width="30" height="50" rx="5" fill="rgba(255,255,255,0.4)"/>
+                        </g>
+                        <!-- Handshake -->
+                        <g class="svg-pulse">
+                            <ellipse cx="100" cy="90" rx="30" ry="20" fill="#ffd700" opacity="0.6"/>
+                            <text x="100" y="95" text-anchor="middle" font-size="20">🤝</text>
+                        </g>
+                        <!-- Plus signs for more partners -->
+                        <text x="180" y="50" fill="#fff" font-size="18" class="svg-bounce">+</text>
+                        <text x="15" y="50" fill="#fff" font-size="18" class="svg-bounce" style="animation-delay: 0.5s;">+</text>
+                        <!-- Dollar sign -->
+                        <g class="svg-bounce" style="animation-delay: 0.7s;">
+                            <circle cx="100" cy="130" r="12" fill="#ffd700" opacity="0.8"/>
+                            <text x="100" y="135" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">$</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="partnership-visual">
+                    <div class="partners-row">
+                        <div class="partner hover-scale"><i class="fas fa-user animate-bounce"></i><span>Partner 1</span></div>
+                        <div class="partner hover-scale"><i class="fas fa-user animate-bounce" style="animation-delay: 0.1s;"></i><span>Partner 2</span></div>
+                        <div class="handshake animate-pulse"><i class="fas fa-handshake"></i></div>
+                        <div class="partner hover-scale"><i class="fas fa-user animate-bounce" style="animation-delay: 0.2s;"></i><span>Partner 3</span></div>
+                        <div class="partner more animate-pulse">+</div>
+                    </div>
+                    <p class="partner-count"><strong>2 to 20 people</strong> working together!</p>
+                </div>
+                <div class="deed-box hover-lift">
+                    <h4><i class="fas fa-file-contract animate-wiggle"></i> Deed of Agreement (Partnership Contract)</h4>
+                    <div class="deed-items">
+                        <span class="hover-scale"><i class="fas fa-coins"></i> How much money each partner puts in</span>
+                        <span class="hover-scale"><i class="fas fa-percent"></i> Interest rates on capital</span>
+                        <span class="hover-scale"><i class="fas fa-money-bill"></i> Salaries for partners</span>
+                        <span class="hover-scale"><i class="fas fa-chart-pie"></i> How profits are shared</span>
+                    </div>
+                </div>
+                <div class="pros-cons compact">
+                    <div class="pros card-animated hover-lift">
+                        <h4><i class="fas fa-plus-circle animate-bounce"></i> Advantages</h4>
+                        <ul>
+                            <li>More money available</li>
+                            <li>Shared skills & ideas</li>
+                            <li>Better decisions together</li>
+                        </ul>
+                    </div>
+                    <div class="cons card-animated hover-lift">
+                        <h4><i class="fas fa-minus-circle animate-bounce" style="animation-delay: 0.2s;"></i> Disadvantages</h4>
+                        <ul>
+                            <li>Unlimited liability</li>
+                            <li>Possible disagreements 😤</li>
+                            <li>Hard to raise large amounts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Limited Companies -->
+        <section class="slide" data-slide="8" data-color="gradient-cyan">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-building"></i>
+                    <span>Business Types</span>
+                </div>
+                <h2 class="slide-title">🏛️ Limited Companies</h2>
+                <div class="key-features-banner">
+                    <div class="feature"><i class="fas fa-shield-alt"></i><span>Limited Liability</span><small>Your personal stuff is safe!</small></div>
+                    <div class="feature"><i class="fas fa-id-card"></i><span>Separate Legal Identity</span><small>Company has its own identity</small></div>
+                    <div class="feature"><i class="fas fa-infinity"></i><span>Continuity</span><small>Company lives on forever</small></div>
+                </div>
+                <div class="company-types">
+                    <div class="company-card private">
+                        <div class="company-icon"><i class="fas fa-lock"></i></div>
+                        <h4>Private Limited Company (Ltd)</h4>
+                        <ul>
+                            <li>🚫 Cannot sell shares to public</li>
+                            <li>📝 Uses "Ltd" or "Limited" in name</li>
+                            <li>👥 Max 50 shareholders</li>
+                            <li>🔒 Shares sold only to family/friends</li>
+                        </ul>
+                        <div class="examples-tag">Examples: Elite Motors, Dell Service</div>
+                    </div>
+                    <div class="company-card public">
+                        <div class="company-icon"><i class="fas fa-city"></i></div>
+                        <h4>Public Limited Company (PLC)</h4>
+                        <ul>
+                            <li>✅ Can sell shares to ANYONE</li>
+                            <li>📝 Uses "PLC" in name</li>
+                            <li>👥 Unlimited shareholders</li>
+                            <li>📈 Shares traded on Stock Exchange</li>
+                        </ul>
+                        <div class="examples-tag">Examples: ACI Healthcare, United Hospital</div>
+                    </div>
+                </div>
+                <div class="documents-box">
+                    <h4><i class="fas fa-folder-open"></i> Important Documents</h4>
+                    <div class="doc-items">
+                        <span><strong>Memorandum of Association:</strong> Sets up the company</span>
+                        <span><strong>Articles of Association:</strong> Rules for running the company</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Cooperatives -->
+        <section class="slide" data-slide="9" data-color="gradient-lime">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-people-carry"></i>
+                    <span>Business Types</span>
+                </div>
+                <h2 class="slide-title">🤗 Cooperatives</h2>
+                <div class="coop-hero">
+                    <div class="coop-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="coop-definition">
+                        <p>A cooperative is a business <strong>owned and run by its members</strong> - the people who use it!</p>
+                    </div>
+                </div>
+                <div class="coop-principles">
+                    <div class="principle">
+                        <i class="fas fa-vote-yea"></i>
+                        <span>Democratic</span>
+                        <small>Members vote on decisions</small>
+                    </div>
+                    <div class="principle">
+                        <i class="fas fa-equals"></i>
+                        <span>Equal</span>
+                        <small>Everyone has equal say</small>
+                    </div>
+                    <div class="principle">
+                        <i class="fas fa-users"></i>
+                        <span>Member-owned</span>
+                        <small>Run for members, not profit</small>
+                    </div>
+                </div>
+                <div class="coop-types">
+                    <div class="coop-type">
+                        <h4><i class="fas fa-shopping-basket"></i> Consumer Cooperative</h4>
+                        <p>Owned by <strong>customers</strong> who shop there</p>
+                        <span class="example">Example: Grocery stores owned by shoppers</span>
+                    </div>
+                    <div class="coop-type">
+                        <h4><i class="fas fa-store"></i> Retailers' Cooperative</h4>
+                        <p>Owned by <strong>shop owners</strong> working together</p>
+                        <span class="example">Example: Small shops joining forces</span>
+                    </div>
+                </div>
+                <div class="coop-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <span>Cooperatives bring people together to help each other! 🌟</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Franchise -->
+        <section class="slide" data-slide="10" data-color="gradient-amber">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-store-alt"></i>
+                    <span>Business Types</span>
+                </div>
+                <h2 class="slide-title">🍔 Franchise Business</h2>
+                <div class="franchise-visual">
+                    <div class="franchisor">
+                        <div class="building-icon"><i class="fas fa-landmark"></i></div>
+                        <h4>Franchisor</h4>
+                        <p>Owns the brand & business model</p>
+                        <div class="franchisor-role">
+                            <span>✓ Shares experience</span>
+                            <span>✓ Provides training</span>
+                            <span>✓ Sets standards</span>
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Sells rights to use brand</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="franchisees">
+                        <div class="stores-row">
+                            <div class="store"><i class="fas fa-store"></i></div>
+                            <div class="store"><i class="fas fa-store"></i></div>
+                            <div class="store"><i class="fas fa-store"></i></div>
+                        </div>
+                        <h4>Franchisees</h4>
+                        <p>Run individual stores</p>
+                        <div class="franchisee-role">
+                            <span>✓ Train employees</span>
+                            <span>✓ Advertise locally</span>
+                            <span>✓ Follow guidelines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="example-brands">
+                    <h4><i class="fas fa-lightbulb"></i> Famous Franchises You Know!</h4>
+                    <div class="brands">
+                        <span>🍟 McDonald's</span>
+                        <span>🍗 KFC</span>
+                        <span>🥪 Subway</span>
+                        <span>🍕 Pizza Hut</span>
+                        <span>☕ Starbucks</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Stakeholders -->
+        <section class="slide" data-slide="11" data-color="gradient-violet">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Key Concept</span>
+                </div>
+                <h2 class="slide-title">👥 Stakeholders</h2>
+                <div class="stakeholder-definition">
+                    <p>A <strong>stakeholder</strong> is anyone who has an interest in a business and can affect or be affected by it!</p>
+                </div>
+                <div class="stakeholder-diagram">
+                    <div class="center-business">
+                        <i class="fas fa-building"></i>
+                        <span>Business</span>
+                    </div>
+                    <div class="stakeholders-ring">
+                        <div class="stakeholder internal" style="--i:0"><i class="fas fa-user-tie"></i><span>Employees</span></div>
+                        <div class="stakeholder internal" style="--i:1"><i class="fas fa-chart-pie"></i><span>Owners</span></div>
+                        <div class="stakeholder external" style="--i:2"><i class="fas fa-shopping-cart"></i><span>Customers</span></div>
+                        <div class="stakeholder external" style="--i:3"><i class="fas fa-truck"></i><span>Suppliers</span></div>
+                        <div class="stakeholder external" style="--i:4"><i class="fas fa-landmark"></i><span>Government</span></div>
+                        <div class="stakeholder external" style="--i:5"><i class="fas fa-city"></i><span>Community</span></div>
+                    </div>
+                </div>
+                <div class="stakeholder-types">
+                    <div class="type internal">
+                        <i class="fas fa-door-open"></i>
+                        <span><strong>Internal:</strong> People INSIDE the company</span>
+                        <small>Employees, Owners, Investors</small>
+                    </div>
+                    <div class="type external">
+                        <i class="fas fa-globe"></i>
+                        <span><strong>External:</strong> People OUTSIDE the company</span>
+                        <small>Suppliers, Customers, Government, Community</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Industry Sectors -->
+        <section class="slide" data-slide="12" data-color="gradient-green">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-industry"></i>
+                    <span>Production</span>
+                </div>
+                <h2 class="slide-title">🏭 Industry Sectors</h2>
+                <p class="sector-intro">Every business belongs to one of these three sectors:</p>
+                <div class="sectors-flow">
+                    <div class="sector primary">
+                        <div class="sector-icon"><i class="fas fa-tractor"></i></div>
+                        <h4>Primary Sector</h4>
+                        <p class="sector-desc">Getting raw materials from nature</p>
+                        <div class="examples">
+                            <span><i class="fas fa-gem"></i> Mining</span>
+                            <span><i class="fas fa-seedling"></i> Farming</span>
+                            <span><i class="fas fa-fish"></i> Fishing</span>
+                            <span><i class="fas fa-oil-can"></i> Oil Drilling</span>
+                        </div>
+                        <div class="sector-label">Also called: Extractive Production</div>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="sector secondary">
+                        <div class="sector-icon"><i class="fas fa-hammer"></i></div>
+                        <h4>Secondary Sector</h4>
+                        <p class="sector-desc">Making products from raw materials</p>
+                        <div class="examples">
+                            <span><i class="fas fa-car"></i> Car Making</span>
+                            <span><i class="fas fa-hard-hat"></i> Construction</span>
+                            <span><i class="fas fa-industry"></i> Factories</span>
+                            <span><i class="fas fa-bread-slice"></i> Food Processing</span>
+                        </div>
+                        <div class="sector-label">Also called: Manufacturing</div>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="sector tertiary">
+                        <div class="sector-icon"><i class="fas fa-headset"></i></div>
+                        <h4>Tertiary Sector</h4>
+                        <p class="sector-desc">Providing services to people</p>
+                        <div class="examples">
+                            <span><i class="fas fa-university"></i> Banking</span>
+                            <span><i class="fas fa-stethoscope"></i> Healthcare</span>
+                            <span><i class="fas fa-chalkboard-teacher"></i> Teaching</span>
+                            <span><i class="fas fa-bus"></i> Transport</span>
+                        </div>
+                        <div class="sector-label">Also called: Services</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 14: Training - Induction -->
+        <section class="slide" data-slide="13" data-color="gradient-rose">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Human Resources</span>
+                </div>
+                <h2 class="slide-title">📚 Training in Business</h2>
+                <div class="training-intro">
+                    <p>Training helps employees learn new skills and do their job better! 🎯</p>
+                </div>
+                <div class="training-types-grid">
+                    <div class="training-card induction">
+                        <div class="training-icon"><i class="fas fa-door-open"></i></div>
+                        <h4>🆕 Induction Training</h4>
+                        <p>For NEW employees joining the company</p>
+                        <div class="training-details">
+                            <span><i class="fas fa-tasks"></i> Learn job duties</span>
+                            <span><i class="fas fa-users"></i> Meet colleagues</span>
+                            <span><i class="fas fa-map"></i> See the workplace</span>
+                            <span><i class="fas fa-bullseye"></i> Learn company values</span>
+                            <span><i class="fas fa-book"></i> Understand policies</span>
+                        </div>
+                    </div>
+                    <div class="training-card on-job">
+                        <div class="training-icon"><i class="fas fa-tools"></i></div>
+                        <h4>💼 On-the-Job Training</h4>
+                        <p>Learning WHILE working at workplace</p>
+                        <div class="training-methods">
+                            <div class="method"><i class="fas fa-eye"></i><strong>Demonstration:</strong> Watching how it's done</div>
+                            <div class="method"><i class="fas fa-user-graduate"></i><strong>Coaching:</strong> Expert guides you closely</div>
+                            <div class="method"><i class="fas fa-sync"></i><strong>Job Rotation:</strong> Try different jobs</div>
+                            <div class="method"><i class="fas fa-project-diagram"></i><strong>Projects:</strong> Work with teams</div>
+                        </div>
+                    </div>
+                    <div class="training-card off-job">
+                        <div class="training-icon"><i class="fas fa-university"></i></div>
+                        <h4>🏫 Off-the-Job Training</h4>
+                        <p>Learning AWAY from workplace</p>
+                        <div class="training-methods">
+                            <div class="method"><i class="fas fa-calendar-day"></i><strong>Day Release:</strong> College once a week</div>
+                            <div class="method"><i class="fas fa-laptop"></i><strong>Online Learning:</strong> Study from home</div>
+                            <div class="method"><i class="fas fa-graduation-cap"></i><strong>Courses:</strong> Full training programs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Training Pros & Cons -->
+        <section class="slide" data-slide="14" data-color="gradient-slate">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Comparison</span>
+                </div>
+                <h2 class="slide-title">⚖️ Training: Good vs Bad</h2>
+                <div class="training-comparison">
+                    <div class="comparison-card on-job-compare">
+                        <h4><i class="fas fa-tools"></i> On-the-Job Training</h4>
+                        <div class="compare-cols">
+                            <div class="advantages">
+                                <h5><i class="fas fa-plus"></i> Advantages</h5>
+                                <ul>
+                                    <li>Cost-effective 💰</li>
+                                    <li>Employees keep working</li>
+                                    <li>Learn by doing</li>
+                                    <li>Train with real colleagues</li>
+                                </ul>
+                            </div>
+                            <div class="disadvantages">
+                                <h5><i class="fas fa-minus"></i> Disadvantages</h5>
+                                <ul>
+                                    <li>Quality depends on trainer</li>
+                                    <li>Bad habits might be passed on</li>
+                                    <li>May disrupt work</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-card off-job-compare">
+                        <h4><i class="fas fa-university"></i> Off-the-Job Training</h4>
+                        <div class="compare-cols">
+                            <div class="advantages">
+                                <h5><i class="fas fa-plus"></i> Advantages</h5>
+                                <ul>
+                                    <li>Learn from experts 🎓</li>
+                                    <li>Get qualifications</li>
+                                    <li>More confident starting job</li>
+                                </ul>
+                            </div>
+                            <div class="disadvantages">
+                                <h5><i class="fas fa-minus"></i> Disadvantages</h5>
+                                <ul>
+                                    <li>More expensive 💸</li>
+                                    <li>Time away from work</li>
+                                    <li>Employees might leave for better jobs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16: Recruitment Process -->
+        <section class="slide" data-slide="15" data-color="gradient-purple">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Human Resources</span>
+                </div>
+                <h2 class="slide-title">👔 Recruitment Process</h2>
+                <p class="recruitment-intro">How companies find and hire new employees:</p>
+                <div class="recruitment-timeline">
+                    <div class="timeline-step">
+                        <div class="step-circle">1</div>
+                        <h4>Vacancy Arises</h4>
+                        <p>Someone leaves or new job needed</p>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step">
+                        <div class="step-circle">2</div>
+                        <h4>Job Analysis</h4>
+                        <p>List tasks & responsibilities</p>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step">
+                        <div class="step-circle">3</div>
+                        <h4>Job Description</h4>
+                        <p>What the job involves</p>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step">
+                        <div class="step-circle">4</div>
+                        <h4>Job Specification</h4>
+                        <p>Skills & qualifications needed</p>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step">
+                        <div class="step-circle">5</div>
+                        <h4>Advertise</h4>
+                        <p>Tell people about the job</p>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step">
+                        <div class="step-circle">6</div>
+                        <h4>Select & Interview</h4>
+                        <p>Choose the best candidate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 17: Internal vs External Recruitment -->
+        <section class="slide" data-slide="16" data-color="gradient-blue">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-search"></i>
+                    <span>Recruitment</span>
+                </div>
+                <h2 class="slide-title">🔍 Internal vs External Recruitment</h2>
+                <div class="recruitment-comparison">
+                    <div class="recruitment-box internal-recruit">
+                        <div class="box-icon"><i class="fas fa-arrow-up"></i></div>
+                        <h4>Internal Recruitment</h4>
+                        <p>Hiring someone who ALREADY works in the company</p>
+                        <div class="recruit-pros">
+                            <h5><i class="fas fa-smile"></i> Good Things</h5>
+                            <ul>
+                                <li>Saves time and money</li>
+                                <li>Person already knows the company</li>
+                                <li>Motivates other workers</li>
+                                <li>No advertising needed</li>
+                            </ul>
+                        </div>
+                        <div class="recruit-cons">
+                            <h5><i class="fas fa-frown"></i> Bad Things</h5>
+                            <ul>
+                                <li>No new skills or ideas</li>
+                                <li>May cause jealousy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recruitment-box external-recruit">
+                        <div class="box-icon"><i class="fas fa-globe"></i></div>
+                        <h4>External Recruitment</h4>
+                        <p>Hiring someone NEW from outside the company</p>
+                        <div class="advertising-methods">
+                            <h5>Where to advertise:</h5>
+                            <span>📰 Newspapers</span>
+                            <span>💼 Job Centres</span>
+                            <span>🌐 Online</span>
+                            <span>🏢 Agencies</span>
+                        </div>
+                        <div class="cv-info">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Applicants send a <strong>CV (Curriculum Vitae)</strong> - a document showing their qualifications and experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 18: Employment Contracts -->
+        <section class="slide" data-slide="17" data-color="gradient-teal">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-file-signature"></i>
+                    <span>Employment</span>
+                </div>
+                <h2 class="slide-title">📋 Employment Contracts</h2>
+                <div class="contract-hero">
+                    <div class="contract-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <p>A <strong>contract of employment</strong> is a legal agreement between employer and employee!</p>
+                </div>
+                <div class="contract-includes">
+                    <h4>What's included in a contract?</h4>
+                    <div class="contract-items">
+                        <div class="contract-item"><i class="fas fa-user"></i> Names of employer & employee</div>
+                        <div class="contract-item"><i class="fas fa-briefcase"></i> Job title</div>
+                        <div class="contract-item"><i class="fas fa-calendar"></i> Start date</div>
+                        <div class="contract-item"><i class="fas fa-clock"></i> Working hours</div>
+                        <div class="contract-item"><i class="fas fa-pound-sign"></i> Salary & benefits</div>
+                        <div class="contract-item"><i class="fas fa-umbrella-beach"></i> Holiday time</div>
+                    </div>
+                </div>
+                <div class="employment-types">
+                    <div class="emp-type part-time">
+                        <h4><i class="fas fa-clock"></i> Part-Time</h4>
+                        <p>1-35 hours per week</p>
+                        <div class="emp-pros">
+                            <span>✓ Flexible hours</span>
+                            <span>✓ Good for busy times</span>
+                            <span>✓ Less expensive</span>
+                        </div>
+                        <div class="emp-cons">
+                            <span>✗ Less training</span>
+                            <span>✗ May be less committed</span>
+                        </div>
+                    </div>
+                    <div class="emp-type full-time">
+                        <h4><i class="fas fa-business-time"></i> Full-Time</h4>
+                        <p>35+ hours per week</p>
+                        <div class="emp-pros">
+                            <span>✓ More committed</span>
+                            <span>✓ More training</span>
+                            <span>✓ Better promotion chances</span>
+                        </div>
+                        <div class="emp-cons">
+                            <span>✗ More expensive</span>
+                            <span>✗ Less flexible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 19: Privatisation -->
+        <section class="slide" data-slide="18" data-color="gradient-indigo">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Economics</span>
+                </div>
+                <h2 class="slide-title">🔄 Privatisation</h2>
+                <div class="privatisation-definition">
+                    <p><strong>Privatisation</strong> = Transferring a business from government ownership to private ownership</p>
+                </div>
+                <div class="privatisation-visual">
+                    <div class="sector-box public-sector">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Public Sector</h4>
+                        <p>Government owned</p>
+                        <small>e.g., Public hospitals, roads</small>
+                    </div>
+                    <div class="transfer-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>PRIVATISATION</span>
+                    </div>
+                    <div class="sector-box private-sector">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Private Sector</h4>
+                        <p>Privately owned</p>
+                        <small>e.g., Private companies</small>
+                    </div>
+                </div>
+                <div class="privatisation-proscons">
+                    <div class="priv-pros">
+                        <h4><i class="fas fa-thumbs-up"></i> Benefits</h4>
+                        <ul>
+                            <li>🎯 More efficient</li>
+                            <li>🏃 Less political interference</li>
+                            <li>📊 Shareholder pressure improves performance</li>
+                            <li>⚔️ More competition</li>
+                        </ul>
+                    </div>
+                    <div class="priv-cons">
+                        <h4><i class="fas fa-thumbs-down"></i> Drawbacks</h4>
+                        <ul>
+                            <li>🚰 Natural monopolies (like water) hard to compete</li>
+                            <li>💔 Profit over public interest</li>
+                            <li>💸 Government loses dividends</li>
+                            <li>📋 Need to regulate private monopolies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 20: Retailers -->
+        <section class="slide" data-slide="19" data-color="gradient-pink">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Commerce</span>
+                </div>
+                <h2 class="slide-title">🛒 Retailers</h2>
+                <div class="retailer-definition">
+                    <p>A <strong>retailer</strong> is the final link in getting products to YOU!</p>
+                </div>
+                <div class="distribution-chain">
+                    <div class="chain-item producer"><i class="fas fa-industry"></i><span>Producer</span></div>
+                    <i class="fas fa-arrow-right chain-arrow"></i>
+                    <div class="chain-item wholesaler"><i class="fas fa-warehouse"></i><span>Wholesaler</span></div>
+                    <i class="fas fa-arrow-right chain-arrow"></i>
+                    <div class="chain-item retailer highlight"><i class="fas fa-store"></i><span>Retailer</span></div>
+                    <i class="fas fa-arrow-right chain-arrow"></i>
+                    <div class="chain-item customer"><i class="fas fa-smile"></i><span>Customer (You!)</span></div>
+                </div>
+                <div class="retailer-services">
+                    <h4><i class="fas fa-hand-holding-heart"></i> Services Retailers Provide:</h4>
+                    <div class="services-grid">
+                        <div class="service"><i class="fas fa-box-open"></i> Provide goods you want</div>
+                        <div class="service"><i class="fas fa-cubes"></i> Sell in small quantities</div>
+                        <div class="service"><i class="fas fa-clock"></i> Open when you need them</div>
+                        <div class="service"><i class="fas fa-credit-card"></i> Offer credit facilities</div>
+                        <div class="service"><i class="fas fa-ad"></i> Advertising & window displays</div>
+                        <div class="service"><i class="fas fa-star"></i> Introduce new products</div>
+                    </div>
+                </div>
+                <div class="retailer-goal">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Goal: Make customers HAPPY by exceeding their expectations! 😊</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 21: International Trade -->
+        <section class="slide" data-slide="20" data-color="gradient-sky">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Global Business</span>
+                </div>
+                <h2 class="slide-title">🌍 International Trade</h2>
+                
+                <!-- Animated Globe SVG -->
+                <div class="animated-illustration globe-scene" style="max-width: 200px;">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Earth -->
+                        <circle cx="100" cy="100" r="70" fill="#10b981" opacity="0.5"/>
+                        <!-- Continents (simplified) -->
+                        <ellipse cx="85" cy="80" rx="25" ry="20" fill="#10b981" class="svg-pulse"/>
+                        <ellipse cx="120" cy="110" rx="20" ry="25" fill="#10b981" class="svg-pulse" style="animation-delay: 0.3s;"/>
+                        <ellipse cx="80" cy="120" rx="15" ry="10" fill="#10b981" class="svg-pulse" style="animation-delay: 0.6s;"/>
+                        <!-- Orbit ring -->
+                        <ellipse cx="100" cy="100" rx="85" ry="30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="10 5" class="svg-rotate" style="transform-origin: center;"/>
+                        <!-- Flying plane -->
+                        <g class="svg-orbit" style="animation: orbit 6s linear infinite;">
+                            <text x="180" y="100" font-size="20">✈️</text>
+                        </g>
+                        <!-- Arrows going around -->
+                        <g class="svg-pulse">
+                            <path d="M30 100 Q 60 60 100 50" fill="none" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrowhead)"/>
+                            <path d="M170 100 Q 140 140 100 150" fill="none" stroke="#6366f1" stroke-width="3"/>
+                        </g>
+                        <!-- Dollar signs -->
+                        <text x="45" y="50" fill="#ffd700" font-size="16" font-weight="bold" class="svg-bounce">$</text>
+                        <text x="145" y="160" fill="#ffd700" font-size="14" font-weight="bold" class="svg-bounce" style="animation-delay: 0.5s;">$</text>
+                    </svg>
+                </div>
+                
+                <div class="trade-definition animate-glow">
+                    <p><strong>International Trade</strong> = Exchange of goods and services between countries!</p>
+                </div>
+                <div class="trade-visual">
+                    <div class="country hover-scale"><i class="fas fa-flag animate-wiggle"></i><span>Country A</span></div>
+                    <div class="trade-arrows">
+                        <div class="export-arrow card-animated hover-lift">
+                            <i class="fas fa-arrow-right animate-pulse"></i>
+                            <span>EXPORTS (Selling abroad)</span>
+                        </div>
+                        <div class="import-arrow card-animated hover-lift">
+                            <i class="fas fa-arrow-left animate-pulse"></i>
+                            <span>IMPORTS (Buying from abroad)</span>
+                        </div>
+                    </div>
+                    <div class="country hover-scale"><i class="fas fa-flag animate-wiggle" style="animation-delay: 0.5s;"></i><span>Country B</span></div>
+                </div>
+                <div class="trade-types">
+                    <div class="trade-type visible card-animated hover-lift">
+                        <h4><i class="fas fa-box animate-bounce"></i> Visible Trade</h4>
+                        <p>Trade in <strong>physical goods</strong></p>
+                        <span>e.g., Cars, food, clothes</span>
+                    </div>
+                    <div class="trade-type invisible card-animated hover-lift">
+                        <h4><i class="fas fa-cloud animate-float"></i> Invisible Trade</h4>
+                        <p>Trade in <strong>services</strong></p>
+                        <span>e.g., Banking, tourism, insurance</span>
+                    </div>
+                </div>
+                <div class="trade-benefits">
+                    <h4><i class="fas fa-star animate-rotate"></i> Benefits of International Trade:</h4>
+                    <div class="benefits-pills">
+                        <span class="hover-scale">💪 Better competition</span>
+                        <span class="hover-scale">📈 More sales & profits</span>
+                        <span class="hover-scale">🌐 Access to technology</span>
+                        <span class="hover-scale">🏆 Global market share</span>
+                        <span class="hover-scale">📅 Stable throughout seasons</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 22: Trade Blocs & Multinationals -->
+        <section class="slide" data-slide="21" data-color="gradient-orange">
+            <div class="slide-content">
+                <div class="topic-badge">
+                    <i class="fas fa-globe"></i>
+                    <span>Global Business</span>
+                </div>
+                <h2 class="slide-title">🌐 Trade Blocs & Multinationals</h2>
+                <div class="two-columns">
+                    <div class="column trade-bloc-col">
+                        <div class="column-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h4>Trade Blocs</h4>
+                        </div>
+                        <p>Groups of countries that agree to reduce trade barriers!</p>
+                        <div class="bloc-benefits">
+                            <span>🚫 No/lower taxes (tariffs)</span>
+                            <span>🚶 Free movement of people</span>
+                            <span>📦 Free movement of goods</span>
+                            <span>💰 Free movement of money</span>
+                        </div>
+                        <div class="examples-tag">
+                            Examples: European Union, NAFTA
+                        </div>
+                    </div>
+                    <div class="column multinational-col">
+                        <div class="column-header">
+                            <i class="fas fa-building"></i>
+                            <h4>Multinationals (MNCs)</h4>
+                        </div>
+                        <p>Companies operating in MANY countries!</p>
+                        <div class="mnc-examples">
+                            <span>🛢️ Shell</span>
+                            <span>📦 DHL</span>
+                            <span>🍔 McDonald's</span>
+                            <span>📱 Apple</span>
+                        </div>
+                        <div class="mnc-proscons">
+                            <div class="mnc-pros">
+                                <span>✓ Create jobs</span>
+                                <span>✓ Bring training</span>
+                                <span>✓ Cheaper goods</span>
+                            </div>
+                            <div class="mnc-cons">
+                                <span>✗ Profits go abroad</span>
+                                <span>✗ May hurt local businesses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exporter-challenges">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenges for Exporters:</h4>
+                    <div class="challenges">
+                        <span>🗣️ Language barriers</span>
+                        <span>📏 Distance</span>
+                        <span>💱 Currency exchange</span>
+                        <span>📄 Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 23: Balance of Payments -->
+        <section class="slide" data-slide="22" data-color="gradient-cyan">
+            <div class="slide-content">
+                <div class="topic-badge animate-pulse">
+                    <i class="fas fa-calculator"></i>
+                    <span>Economics</span>
+                </div>
+                <h2 class="slide-title">📊 Balance of Payments</h2>
+                
+                <!-- Animated Balance Chart SVG -->
+                <div class="animated-illustration balance-chart" style="max-width: 300px;">
+                    <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Chart background -->
+                        <rect x="40" y="20" width="220" height="110" rx="5" fill="rgba(255,255,255,0.1)"/>
+                        
+                        <!-- Grid lines -->
+                        <line x1="40" y1="75" x2="260" y2="75" stroke="rgba(255,255,255,0.2)" stroke-dasharray="5,5"/>
+                        
+                        <!-- Export bar (green) -->
+                        <g class="svg-float" style="animation-delay: 0.2s;">
+                            <rect x="70" y="40" width="40" height="70" rx="3" fill="#10b981" opacity="0.8"/>
+                            <text x="90" y="35" text-anchor="middle" fill="#10b981" font-size="10">Exports</text>
+                            <text x="90" y="60" text-anchor="middle" fill="#fff" font-size="12">📤</text>
+                        </g>
+                        
+                        <!-- Import bar (red) -->
+                        <g class="svg-float" style="animation-delay: 0.4s;">
+                            <rect x="130" y="50" width="40" height="60" rx="3" fill="#ef4444" opacity="0.8"/>
+                            <text x="150" y="35" text-anchor="middle" fill="#ef4444" font-size="10">Imports</text>
+                            <text x="150" y="65" text-anchor="middle" fill="#fff" font-size="12">📥</text>
+                        </g>
+                        
+                        <!-- Balance result (animated) -->
+                        <g class="svg-bounce">
+                            <rect x="190" y="55" width="50" height="55" rx="3" fill="#6366f1" opacity="0.8"/>
+                            <text x="215" y="35" text-anchor="middle" fill="#6366f1" font-size="10">Balance</text>
+                            <text x="215" y="80" text-anchor="middle" fill="#fff" font-size="10">💰</text>
+                        </g>
+                        
+                        <!-- Equals sign -->
+                        <text x="175" y="80" fill="#fff" font-size="16" font-weight="bold" class="svg-pulse">=</text>
+                        
+                        <!-- Minus sign -->
+                        <text x="120" y="80" fill="#fff" font-size="16" font-weight="bold" class="svg-pulse" style="animation-delay: 0.3s;">−</text>
+                    </svg>
+                </div>
+                
+                <div class="balance-explanation animate-glow">
+                    <p>This shows how much money a country makes and spends trading with other countries!</p>
+                </div>
+                <div class="formulas-section">
+                    <div class="formula-card card-animated hover-lift">
+                        <h4><i class="fas fa-box animate-bounce"></i> Balance of Trade (Visible)</h4>
+                        <div class="formula">
+                            Visible Exports - Visible Imports = Balance of Trade
+                        </div>
+                        <small>Physical goods only</small>
+                    </div>
+                    <div class="formula-card card-animated hover-lift">
+                        <h4><i class="fas fa-cloud animate-float"></i> Invisible Balance</h4>
+                        <div class="formula">
+                            Invisible Exports - Invisible Imports = Invisible Balance
+                        </div>
+                        <small>Services only</small>
+                    </div>
+                    <div class="formula-card main card-animated hover-lift animate-glow">
+                        <h4><i class="fas fa-balance-scale animate-swing"></i> Balance of Payments</h4>
+                        <div class="formula">
+                            (All Exports) - (All Imports) = Balance of Payments
+                        </div>
+                    </div>
+                </div>
+                <div class="surplus-deficit">
+                    <div class="result-box surplus card-animated hover-scale">
+                        <i class="fas fa-arrow-up animate-bounce"></i>
+                        <h4>Surplus</h4>
+                        <p>More exports than imports = PROFIT! 🎉</p>
+                    </div>
+                    <div class="result-box deficit card-animated hover-scale">
+                        <i class="fas fa-arrow-down animate-bounce" style="animation-delay: 0.3s;"></i>
+                        <h4>Deficit</h4>
+                        <p>More imports than exports = LOSS 😟</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 24: Summary -->
+        <section class="slide" data-slide="23" data-color="gradient-rainbow">
+            <div class="slide-content title-slide">
+                <!-- Animated Confetti Background -->
+                <div class="particles confetti-particles" id="confettiParticles">
+                    <div class="particle confetti" style="left: 5%; animation-delay: 0s; background: #ef4444;"></div>
+                    <div class="particle confetti" style="left: 15%; animation-delay: 0.5s; background: #f59e0b;"></div>
+                    <div class="particle confetti" style="left: 25%; animation-delay: 1s; background: #10b981;"></div>
+                    <div class="particle confetti" style="left: 35%; animation-delay: 1.5s; background: #6366f1;"></div>
+                    <div class="particle confetti" style="left: 45%; animation-delay: 2s; background: #ec4899;"></div>
+                    <div class="particle confetti" style="left: 55%; animation-delay: 2.5s; background: #8b5cf6;"></div>
+                    <div class="particle confetti" style="left: 65%; animation-delay: 3s; background: #ef4444;"></div>
+                    <div class="particle confetti" style="left: 75%; animation-delay: 3.5s; background: #ffd700;"></div>
+                    <div class="particle confetti" style="left: 85%; animation-delay: 4s; background: #10b981;"></div>
+                    <div class="particle confetti" style="left: 95%; animation-delay: 4.5s; background: #6366f1;"></div>
+                </div>
+                
+                <!-- Animated Trophy SVG -->
+                <div class="animated-illustration trophy-scene" style="max-width: 200px;">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Trophy cup -->
+                        <g class="svg-float">
+                            <!-- Main cup -->
+                            <path d="M60 50 L60 90 C60 120 80 140 100 140 C120 140 140 120 140 90 L140 50 Z" fill="#ffd700"/>
+                            <!-- Left handle -->
+                            <path d="M60 60 C30 60 30 100 60 100" stroke="#ffd700" stroke-width="10" fill="none"/>
+                            <!-- Right handle -->
+                            <path d="M140 60 C170 60 170 100 140 100" stroke="#ffd700" stroke-width="10" fill="none"/>
+                            <!-- Base stem -->
+                            <rect x="90" y="140" width="20" height="20" fill="#ffd700"/>
+                            <!-- Base -->
+                            <rect x="70" y="160" width="60" height="15" rx="3" fill="#ffd700"/>
+                        </g>
+                        <!-- Star on trophy -->
+                        <g class="svg-pulse">
+                            <polygon points="100,65 106,80 122,82 110,94 113,110 100,102 87,110 90,94 78,82 94,80" fill="#fff"/>
+                        </g>
+                        <!-- Sparkles -->
+                        <g class="svg-bounce">
+                            <circle cx="50" cy="40" r="4" fill="#ffd700"/>
+                            <circle cx="150" cy="35" r="5" fill="#ffd700"/>
+                            <circle cx="40" cy="120" r="3" fill="#ffd700"/>
+                            <circle cx="160" cy="115" r="4" fill="#ffd700"/>
+                        </g>
+                        <!-- Stars floating -->
+                        <text x="30" y="30" font-size="20" class="svg-pulse">⭐</text>
+                        <text x="160" y="45" font-size="16" class="svg-pulse" style="animation-delay: 0.5s;">⭐</text>
+                        <text x="45" y="180" font-size="14" class="svg-pulse" style="animation-delay: 1s;">✨</text>
+                        <text x="145" y="175" font-size="14" class="svg-pulse" style="animation-delay: 1.5s;">✨</text>
+                    </svg>
+                </div>
+                
+                <div class="celebration">
+                    <div class="trophy animate-bounce">🏆</div>
+                </div>
+                <h2 class="slide-title sparkle">🎉 Congratulations!</h2>
+                <p class="tagline">You've completed the Business Studies Course!</p>
+                <div class="summary-grid">
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-book"></i><span>Business Basics</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-balance-scale"></i><span>Needs vs Wants</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-user"></i><span>Sole Traders</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-handshake"></i><span>Partnerships</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-building"></i><span>Companies</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-store-alt"></i><span>Franchises</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-users"></i><span>Stakeholders</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-industry"></i><span>Sectors</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-chalkboard-teacher"></i><span>Training</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-user-plus"></i><span>Recruitment</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-globe"></i><span>International Trade</span></div>
+                    <div class="summary-item card-animated hover-scale"><i class="fas fa-chart-line"></i><span>Economics</span></div>
+                </div>
+                <div class="final-message animate-glow">
+                    <p>You're now ready to understand the business world! 🚀</p>
+                </div>
+                <button class="restart-btn animate-pulse hover-lift" id="restartBtn">
+                    <i class="fas fa-redo"></i>
+                    <span>Start Again</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Keyboard hints -->
+    <div class="keyboard-hints">
+        <span><kbd>←</kbd> <kbd>→</kbd> Navigate</span>
+        <span><kbd>M</kbd> Menu</span>
+        <span><kbd>Space</kbd> Next</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
